@@ -1,0 +1,112 @@
+# This file is example config file for AutoFoto0 program.
+# You can copy this file and change some parametrs to do fotometry from your data.
+
+# ===========================================================
+#                       INPUT SETTINGS
+# ===========================================================
+
+# Format of input data. Possibile values are : "AUTO", "AVI" and "FITS"
+InputFormat = "AUTO"
+
+# --------------
+# Data of object
+# --------------
+Data = "E:\Astro\44Boo_00.avi"
+
+# -------------------
+# Flat input settings
+# -------------------
+UseFlat = True
+Flat    = "E:\Astro\Flat00.avi"
+
+UseFlatDark  = True
+FlatDark     = "E:\Astro\Flat00Dark.avi"
+UseFlatDark2 = False
+FlatDark2    = "Enter here FlatDark2 sequence"
+
+UseFlat2 = False
+Flat2    = "Enter here Flat2 sequence"
+
+UseFlat2Dark  = False
+Flat2Dark     = "Enter here Flat2Dark sequence"
+UseFlat2Dark2 = False
+Flat2Dark2    = "Enter here Flat2Dark2 sequence"
+
+# ------------------------
+# Dark/Bias input settings
+# ------------------------
+
+UseDark  = True
+Dark     = "E:\Astro\44Boo_00DarkPre.avi"
+UseDark2 = True
+Dark2    = "E:\Astro\44Boo_00DarkPost.avi"
+
+# ===========================================================
+#                       OUTPUT SETTINGS
+# ===========================================================
+
+SaveResults = True
+OutputFile  = "44Boo.txt"
+
+# ===========================================================
+#                     FOTOMETRY SETTINGS
+# ===========================================================
+
+# Description: Signal of object is mesured in circle 1,
+# background is mesured in ring beetwen circle 2 and 3.
+
+Aperture1 = 4
+Aperture2 = 8
+Aperture3 = 12
+
+# ===========================================================
+#                   STAR TRACKING SETTINGS
+# ===========================================================
+
+ManualTracking           = False
+ManualTrackingAutoCenter = True
+AutoCenterTolerance      = 10
+
+# This value should be True for fotometry on movable objects
+# (planets, minor planets, planetoids, comets, etc.), and False
+# for star fotometry.
+AllowMovableObjects = False
+
+AllowReferenceTracking = True
+
+# Default tolerance for star tracking. Specify -1 if you want to
+# enter all tolerances from keyboard.
+DefaultTolerance = -1
+
+# ===========================================================
+#                      DISPLAY SETTINGS
+# ===========================================================
+
+# When this value is True, program show all flat and dark/bias source images.
+ShowCalibrationSource   = False
+
+# The number of miliseconds for witch the image is show. Specify -1 to indicate
+# that the image will be show until return key will be pressed.
+WaitOnCalibrationSource = 0
+
+# When this value is True, program show all master flats and master darks/biasses
+ShowCalibrationImages   = True
+
+# The number of miliseconds for witch the image is show. Specify -1 to indicate
+# that the image will be show until return key will be pressed.
+WaitOnCalibrationImages = -1
+
+# This value indicates that images of object will be show, when program will be
+# doing fotometry.
+ShowFotometryImages   = True
+
+# The number of miliseconds for witch the image is show. Specify -1 to indicate
+# that the image will be show until return key will be pressed.
+WaitOnFotometryImages = 0
+
+
+ShowPlot = True
+
+# This value indicates that text messages will be displayed. When value is False,
+# next values are ignored.
+DisplayTextMessages = True

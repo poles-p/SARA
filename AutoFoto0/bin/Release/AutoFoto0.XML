@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AutoFoto0</name>
+    </assembly>
+    <members>
+        <member name="T:SARA.Programs.AutoFoto0">
+            <summary>
+            Simple program to automatic fotometry.
+            </summary>
+        </member>
+        <member name="M:SARA.Programs.AutoFoto0.Run(System.String)">
+            <summary>
+            Start program.
+            </summary>
+            <param name="configFilePath">
+            Path to config file that contains program parametrs.
+            </param>
+        </member>
+    </members>
+</doc>

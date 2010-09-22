@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Chm;Hxs;Web">
+    <PropertyGroup>
+        <Name>SARA</Name>
+        <TopicStyle>hana</TopicStyle>
+        <LanguageId>1033</LanguageId>
+    </PropertyGroup>
+    <ItemGroup>
+        <Dlls Include="D:\ProjektyCS\SARA\SARA\bin\Release\SARA.dll" />
+        <Dlls Include="D:\ProjektyCS\SARA\SARA.Drawing\bin\Release\SARA.Drawing.dll" />
+        <Dlls Include="D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.SimpleGUI.dll" />
+        <Dlls Include="D:\ProjektyCS\SARA\AutoFoto0\bin\Release\AutoFoto0.exe" />
+        <Dlls Include="D:\ProjektyCS\SARA\SARA.Avi\bin\Release\SARA.Avi.dll" />
+        <Comments Include="D:\ProjektyCS\SARA\SARA\bin\Release\SARA.XML" />
+        <Comments Include="D:\ProjektyCS\SARA\SARA.Drawing\bin\Release\SARA.Drawing.XML" />
+        <Comments Include="D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.SimpleGUI.XML" />
+        <Comments Include="D:\ProjektyCS\SARA\AutoFoto0\bin\Release\AutoFoto0.XML" />
+        <Comments Include="D:\ProjektyCS\SARA\SARA.Avi\bin\Release\SARA.Avi.XML" />
+    </ItemGroup>
+    <Import Project="$(DXROOT)\Examples\Generic\generic.targets" />
+</Project>
