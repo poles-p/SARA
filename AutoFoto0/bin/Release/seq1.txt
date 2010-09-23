@@ -1,0 +1,8 @@
+Flat     = "D:\ProjektyCS\SARA\Data\Flat2\*.fit"
+FlatBias = "D:\ProjektyCS\SARA\Data\Flat2Bias\*.fit"
+Bias     = "D:\ProjektyCS\SARA\Data\Seq1\DarkPost\*.fit"
+Data     = "D:\ProjektyCS\SARA\Data\Seq1\Data\boo<291>.fit"
+
+ApertureRadius1 = 4
+ApertureRadius2 = 8
+ApertureRadius3 = 12

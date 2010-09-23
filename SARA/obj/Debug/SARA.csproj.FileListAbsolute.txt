@@ -1,0 +1,5 @@
+D:\ProjektyCS\SARA\SARA\obj\Debug\ResolveAssemblyReference.cache
+D:\ProjektyCS\SARA\SARA\bin\Debug\SARA.dll
+D:\ProjektyCS\SARA\SARA\bin\Debug\SARA.pdb
+D:\ProjektyCS\SARA\SARA\obj\Debug\SARA.dll
+D:\ProjektyCS\SARA\SARA\obj\Debug\SARA.pdb

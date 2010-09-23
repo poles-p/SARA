@@ -1,0 +1,9 @@
+D:\ProjektyCS\SARA\SARA.Drawing\bin\Release\SARA.Drawing.dll
+D:\ProjektyCS\SARA\SARA.Drawing\bin\Release\SARA.Drawing.pdb
+D:\ProjektyCS\SARA\SARA.Drawing\bin\Release\SARA.dll
+D:\ProjektyCS\SARA\SARA.Drawing\bin\Release\SARA.pdb
+D:\ProjektyCS\SARA\SARA.Drawing\obj\Release\ResolveAssemblyReference.cache
+D:\ProjektyCS\SARA\SARA.Drawing\obj\Release\SARA.Drawing.dll
+D:\ProjektyCS\SARA\SARA.Drawing\obj\Release\SARA.Drawing.pdb
+D:\ProjektyCS\SARA\SARA.Drawing\bin\Release\SARA.xml
+D:\ProjektyCS\SARA\SARA.Drawing\bin\Release\SARA.Drawing.XML

@@ -1,0 +1,7 @@
+D:\ProjektyCS\SARA\SARA.Avi\bin\Debug\SARA.Avi.dll
+D:\ProjektyCS\SARA\SARA.Avi\bin\Debug\SARA.Avi.pdb
+D:\ProjektyCS\SARA\SARA.Avi\bin\Debug\SARA.dll
+D:\ProjektyCS\SARA\SARA.Avi\bin\Debug\SARA.pdb
+D:\ProjektyCS\SARA\SARA.Avi\obj\Debug\ResolveAssemblyReference.cache
+D:\ProjektyCS\SARA\SARA.Avi\obj\Debug\SARA.Avi.dll
+D:\ProjektyCS\SARA\SARA.Avi\obj\Debug\SARA.Avi.pdb

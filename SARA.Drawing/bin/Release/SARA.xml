@@ -1,0 +1,1598 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SARA</name>
+    </assembly>
+    <members>
+        <member name="T:SARA.Core.BaseTypeOperations">
+            <summary>
+            Static class to basic operatons on data of basic types.
+            </summary> 
+        </member>
+        <member name="M:SARA.Core.BaseTypeOperations.ReverseBytes2B(System.Byte*,System.Int32)">
+            <summary>
+            Reverse bytes in two-bytes groups in specified buffer
+            </summary>
+            <remarks>
+            This method convert data buffer of two-byte type (<see cref="T:System.Int16"/>, <see cref="T:System.UInt16"/>) 
+            from little endian to big endian and vice versa.
+            </remarks>
+            <param name="data">
+            Pointer to buffer to reverse.
+            </param>
+            <param name="length">
+            Number of two-bytes groups to reverse (number of bytes to reverse = length*2).
+            </param>
+        </member>
+        <member name="M:SARA.Core.BaseTypeOperations.ReverseBytes4B(System.Byte*,System.Int32)">
+            <summary>
+            Reverse bytes in four-bytes groups in specified buffer.
+            </summary>
+            <remarks>
+            This method convert data buffer of four-byte type (<see cref="T:System.Int32"/>, <see cref="T:System.UInt32"/>,
+            <see cref="T:System.Single"/>) from little endian to big endian and vice versa.
+            </remarks>
+            <param name="data">
+            Pointer to buffer to reverse.
+            </param>
+            <param name="length">
+            Number of four-bytes groups to reverse (number of bytes to reverse = length*4).
+            </param>
+        </member>
+        <member name="M:SARA.Core.BaseTypeOperations.ReverseBytes8B(System.Byte*,System.Int32)">
+            <summary>
+            Reverse bytes in eight-bytes groups in specified buffer.
+            </summary>
+            <remarks>
+            This method convert data buffer of eight-byte type (<see cref="T:System.Int64"/>, <see cref="T:System.UInt64"/>,
+            <see cref="T:System.Double"/>) from little endian to big endian and vice versa.
+            </remarks>
+            <param name="data">
+            Pointer to buffer to reverse.
+            </param>
+            <param name="length">
+            Number of eight-bytes groups to reverse (number of bytes to reverse = length*8).
+            </param>
+        </member>
+        <member name="M:SARA.Core.BaseTypeOperations.ReverseArray``1(``0[])">
+            <summary>
+            Reverse bytes in array.
+            </summary>
+            <remarks>
+            Convert data in array from little endian to big endian and vice versa. Valid types of array are :
+            <see cref="T:System.Byte"/>[], <see cref="T:System.SByte"/>[], <see cref="T:System.UInt16"/>[], <see cref="T:System.Int16"/>[], 
+            <see cref="T:System.UInt32"/>[], <see cref="T:System.Int32"/>[], <see cref="T:System.UInt64"/>[], <see cref="T:System.Int64"/>[], 
+            <see cref="T:System.Single"/>[] and <see cref="T:System.Double"/>[].
+            </remarks>
+            <param name="data">
+            Data array to convert.
+            </param>
+        </member>
+        <member name="M:SARA.Core.BaseTypeOperations.GetConverter``2">
+            <summary>
+            Get converter between specified types.
+            </summary>
+            <remarks>
+            valid types for TInput and TOutput are <see cref="T:System.Byte"/>, <see cref="T:System.SByte"/>, <see cref="T:System.UInt16"/>, 
+            <see cref="T:System.Int16"/>, <see cref="T:System.UInt32"/>, <see cref="T:System.Int32"/>, <see cref="T:System.UInt64"/>, 
+            <see cref="T:System.Int64"/>, <see cref="T:System.Single"/>, <see cref="T:System.Double"/> and <see cref="T:System.Decimal"/>.
+            </remarks>
+            <typeparam name="TInput">
+            Source data format.
+            </typeparam>
+            <typeparam name="TOutput">
+            Destination data format.
+            </typeparam>
+            <returns>
+            Converter between specified types.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.BaseTypeOperations.Identity``1(``0)">
+            <summary>
+            Identity function. Returns own argument.
+            </summary>
+            <typeparam name="T">
+            Type of argument/return value.
+            </typeparam>
+            <param name="arg">
+            Argument to be returned.
+            </param>
+            <returns>
+            Own argument.
+            </returns>
+        </member>
+        <member name="T:SARA.Fotometry.IAperture">
+            <summary>
+            Aperture interface for aperture fotometry.
+            </summary>
+        </member>
+        <member name="M:SARA.Fotometry.IAperture.GetResult(SARA.Core.FloatMatrix)">
+            <summary>
+            Get result of fotometry on specified image.
+            </summary>
+            <param name="image">
+            Source image for fotometry.
+            </param>
+            <returns>
+            Result of fotometry.
+            </returns>
+        </member>
+        <member name="T:SARA.Core.BaseDataMatrix">
+            <summary>
+            Abstract class that is representing multi-dimensional data matrix of any type.
+            </summary>
+            <remarks>
+            This is base class for generic class DataMatrix.
+            </remarks>
+        </member>
+        <member name="M:SARA.Core.BaseDataMatrix.Convert``1">
+            <summary>
+            Convert to DataMatrix of specified type.
+            </summary>
+            <typeparam name="Out">
+            Output type of DataMatrix.
+            </typeparam>
+            <returns>
+            DataMatrix converted to specified type.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.BaseDataMatrix.Copy">
+            <summary>
+            Create copy of matrix.
+            </summary>
+            <returns>
+            Copy of matrix.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.BaseDataMatrix.ToFloatMatrix">
+            <summary>
+            Convert matrix to FloatMatrix.
+            </summary>
+            <remarks>
+            FloatMatrix format of data is used by most of SARA functions.
+            </remarks>
+            <returns>
+            Matrix converted to FloatMatrix.
+            </returns>
+        </member>
+        <member name="P:SARA.Core.BaseDataMatrix.Size">
+            <summary>
+            Number of pixels/cells on matrix.
+            </summary>
+        </member>
+        <member name="P:SARA.Core.BaseDataMatrix.Dimensions">
+            <summary>
+            Dimensions of matrix
+            </summary>
+        </member>
+        <member name="T:SARA.Astrometry.StarTrackerException">
+            <summary>
+            An exception that can be throwed by star tracker.
+            </summary>
+            <remarks>
+            This exception can be throwed by <see cref="T:SARA.Astrometry.IStarTracker"/>.
+            </remarks>
+        </member>
+        <member name="M:SARA.Astrometry.StarTrackerException.#ctor(System.String)">
+            <summary>
+            Constructor that creates new StarTrackerException
+            </summary>
+            <param name="message">
+            Message that describes an error.
+            </param>
+        </member>
+        <member name="T:SARA.FITS.FitsHeader">
+            <summary>
+            Header of FITS file. Header contains iformations about image.
+            </summary>
+        </member>
+        <member name="M:SARA.FITS.FitsHeader.#ctor(System.IO.BinaryReader)">
+            <summary>
+            Create FITS header read from stream. And move stream position to end of header.
+            </summary>
+            <param name="reader">
+            Stream that contains FITS header.
+            </param>
+        </member>
+        <member name="P:SARA.FITS.FitsHeader.Bitpix">
+            <summary>
+            Bits per pixel of FITS file.
+            </summary>
+            <remarks>
+            Possibile values of BITPIX field are:
+            <list type="table">
+                <listheader>
+                    <term>Value</term>
+                    <description>Data represented</description>
+                </listheader>
+                <item>
+                    <term>8</term>
+                    <description>Character or unsigned 8-bit binary integer.</description>
+                </item>
+                <item>
+                    <term>16</term>
+                    <description>Signed 16-bit binary integer.</description>
+                </item>
+                <item>
+                    <term>32</term>
+                    <description>Signed 32-bit binary integer.</description>
+                </item>
+                <item>
+                    <term>64</term>
+                    <description>Signed 64-bit binary integer.</description>
+                </item>
+                <item>
+                    <term>-32</term>
+                    <description>IEEE single precision floating point.</description>
+                </item>
+                <item>
+                    <term>-64</term>
+                    <description>IEEE double precision floating point.</description>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="P:SARA.FITS.FitsHeader.Naxis">
+            <summary>
+            Number of axes in FITS data. A value of zero signifies that no data follow the header.
+            </summary>
+        </member>
+        <member name="P:SARA.FITS.FitsHeader.Dimensions">
+            <summary>
+            Dimensions of matrix representing FITS data.
+            </summary>
+        </member>
+        <member name="T:SARA.Core.Vector2D">
+            <summary>
+            Two dimensional vector.
+            </summary>
+            <remarks>
+            SARA use this structure to represent positions on images, plots, etc. 
+            </remarks>
+        </member>
+        <member name="F:SARA.Core.Vector2D.X">
+            <summary>
+            X coordinate of vector.
+            </summary>
+        </member>
+        <member name="F:SARA.Core.Vector2D.Y">
+            <summary>
+            Y coordinate of vector.
+            </summary>
+        </member>
+        <member name="M:SARA.Core.Vector2D.#ctor(System.Single,System.Single)">
+            <summary>
+            Create new vector.
+            </summary>
+            <param name="x">
+            X coordinate of new vector.
+            </param>
+            <param name="y">
+            Y coordinate of new vector.
+            </param>
+        </member>
+        <member name="M:SARA.Core.Vector2D.op_Addition(SARA.Core.Vector2D,SARA.Core.Vector2D)">
+            <summary>
+            Add vectors.
+            </summary>
+            <param name="a">
+            First summand.
+            </param>
+            <param name="b">
+            Second summand.
+            </param>
+            <returns>
+            Sum of vectors.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.Vector2D.op_Subtraction(SARA.Core.Vector2D,SARA.Core.Vector2D)">
+            <summary>
+            Subtract vectors.
+            </summary>
+            <param name="a">
+            Minuend.
+            </param>
+            <param name="b">
+            Subtrahend.
+            </param>
+            <returns>
+            Difference beetwen vectors.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.Vector2D.op_Multiply(System.Single,SARA.Core.Vector2D)">
+            <summary>
+            Multiply vector by scalar.
+            </summary>
+            <param name="c">
+            Scalar factor.
+            </param>
+            <param name="v">
+            Vector factor.
+            </param>
+            <returns>
+            Scaled vector.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.Vector2D.op_Multiply(SARA.Core.Vector2D,System.Single)">
+            <summary>
+            Multiply vector by scalar.
+            </summary>
+            <param name="v">
+            Vector factor.
+            </param>
+            <param name="c">
+            Scalar factor.
+            </param>
+            <returns>
+            Scaled vector.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.Vector2D.op_Division(SARA.Core.Vector2D,System.Single)">
+            <summary>
+            Divide vector by scalar.
+            </summary>
+            <param name="v">
+            Vector.
+            </param>
+            <param name="c">
+            Scalar.
+            </param>
+            <returns>
+            Divided vector.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.Vector2D.op_Multiply(SARA.Core.Vector2D,SARA.Core.Vector2D)">
+            <summary>
+            Dot product of vectors.
+            </summary>
+            <param name="a">
+            First factor.
+            </param>
+            <param name="b">
+            Second factor.
+            </param>
+            <returns>
+            Dot product of vectors.
+            </returns>
+        </member>
+        <member name="P:SARA.Core.Vector2D.Zero">
+            <summary>
+            Zero vector.
+            </summary>
+        </member>
+        <member name="T:SARA.Astrometry.IStarTracker">
+            <summary>
+            Star tracker interface
+            </summary>
+            <remarks>
+            Star tracker track star on images
+            </remarks>
+        </member>
+        <member name="M:SARA.Astrometry.IStarTracker.Track(SARA.Core.FloatMatrix)">
+            <summary>
+            Track star method
+            </summary>
+            <remarks>
+            Find selected star on image. Updates Position property.
+            </remarks>
+            <param name="image">
+            An image to find selected star.
+            </param>
+        </member>
+        <member name="P:SARA.Astrometry.IStarTracker.Position">
+            <summary>
+            Last position of selected star.
+            </summary>
+            <remarks>
+            Value should be updated every Track method call.
+            </remarks>
+        </member>
+        <member name="T:SARA.Core.FloatMatrix">
+            <summary>
+            Multidimensional matrix of floats.
+            </summary>
+            <remarks>
+            FloatMatrix is basic type to reperesents data (images, spectrums, matrices,...) in SARA. This type is 
+            encapsulation of DataMatrix.
+            </remarks>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.#ctor(SARA.Core.DataMatrix{System.Single})">
+            <summary>
+            Create new FloatMatrix.
+            </summary>
+            <remarks>
+            Data of matrix are not copied, so when we change data in new FloatMatrix, we also change it in source.
+            </remarks>
+            <param name="dataMatrix">
+            dataMatrix source matrix to create FloatMatrix.
+            </param>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.#ctor(SARA.Core.BaseDataMatrix)">
+            <summary>
+            Create new FloatMatrix.
+            </summary>
+            <remarks>
+            This constructor create copy of source matrix.
+            </remarks>
+            <param name="dataMatrix">
+            Source matrix to create FloatMatrix.
+            </param>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.Copy">
+            <summary>
+            Create copy of matrix.
+            </summary>
+            <returns>
+            Copy of matrix.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.Add(SARA.Core.FloatMatrix)">
+            <summary>
+            Add other matrix.
+            </summary>
+            <remarks>
+            Add value of corresponding cell to every cell of matrix. Matrices have to have the same dimensions.
+            </remarks>
+            <param name="m">
+            Matrix to be added. Method does not change data in m.
+            </param>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.Add(System.Single)">
+            <summary>
+            Add constans to matrix.
+            </summary>
+            <remarks>
+            Add constans to every cell of matrix.
+            </remarks>
+            <param name="c">
+            Constans to be added.
+            </param>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.Subtract(SARA.Core.FloatMatrix)">
+            <summary>
+            Subtract other matrix.
+            </summary>
+            <remarks>
+            Subtract value of corresponding cell to every cell of matrix. Matrices have to have the same dimensions.
+            </remarks>
+            <param name="m">
+            Matrix to be subtracted. Method does not change data in m.
+            </param>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.Subtract(System.Single)">
+            <summary>
+            Subtract constans from matrix.
+            </summary>
+            <remarks>
+            Subtract constans from every cell of matrix.
+            </remarks>
+            <param name="c">
+            Constans to be subtracted.
+            </param>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.Multiply(SARA.Core.FloatMatrix)">
+            <summary>
+            Multiply by other matrix.
+            </summary>
+            <remarks>
+            Multiply every cell by corresponding cell from other matrix. It is not algebraic matrix multiply!
+            Matrices have to have same dimensions.
+            </remarks>
+            <param name="m">
+            Matrix to be multiplied. Method does not change data in m.
+            </param>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.Multiply(System.Single)">
+            <summary>
+            Multiply by constans.
+            </summary>
+            <remarks>
+            Multiply every cell by constans.
+            </remarks>
+            <param name="c">
+            Constans to be multiplied.
+            </param>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.Divide(SARA.Core.FloatMatrix)">
+            <summary>
+            Divide by other matrix.
+            </summary>
+            <remarks>
+            Divide every cell by corresponding cell from other matrix. It is not algebraic matrix division!
+            Matrices have to have same dimensions.
+            </remarks>
+            <param name="m">
+            Matrix to be divided by. Method does not change data in m.
+            </param>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.Divide(System.Single)">
+            <summary>
+            Divide by constans.
+            </summary>
+            <remarks>
+            Divide every cell of matrix by constans.
+            </remarks>
+            <param name="c">
+            Constans to be divided by.
+            </param>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.Negate">
+            <summary>
+            Additive inverse of matrix.
+            </summary>
+            <remarks>
+            Substitute every cell of matrix by its additive inverse.
+            </remarks>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.Inverse">
+            <summary>
+            Multiplicative inverse of matrix.
+            </summary>
+            <remarks>
+            Substitute every cell of matrix by its multiplicative inverse.
+            </remarks>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.op_Addition(SARA.Core.FloatMatrix,SARA.Core.FloatMatrix)">
+            <summary>
+            Add matrices.
+            </summary>
+            <remarks>
+            Create new matrix and fill cells by sums of corresponding cells from source matrices.
+            Source matrices have to have same dimensions. Operator does not change source matrices.
+            </remarks>
+            <param name="a">
+            First summand.
+            </param>
+            <param name="b">
+            Second summand.
+            </param>
+            <returns>
+            New matrix beeing sum of source matrices.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.op_Addition(SARA.Core.FloatMatrix,System.Single)">
+            <summary>
+            Add constans to matrix.
+            </summary>
+            <remarks>
+            Operator does not change source matrix.
+            </remarks>
+            <param name="a">
+            Source matrix.
+            </param>
+            <param name="c">
+            Constans to be added.
+            </param>
+            <returns>
+            New matrix beeing source matrix after adding constans to every cells.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.op_Addition(System.Single,SARA.Core.FloatMatrix)">
+            <summary>
+            Add constans to matrix.
+            </summary>
+            <remarks>
+            Operator does not change source matrix.
+            </remarks>
+            <param name="c">
+            Constans to be added.
+            </param>
+            <param name="a">
+            Source matrix.
+            </param>        
+            <returns>
+            New matrix beeing source matrix after adding constans to every cells.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.op_Subtraction(SARA.Core.FloatMatrix,SARA.Core.FloatMatrix)">
+            <summary>
+            Subtract matrices.
+            </summary>
+            <remarks>
+            Matrices have to have same dimensions. Operator does not change source matrices.
+            </remarks>
+            <param name="a">
+            Minuend of subtaction.
+            </param>
+            <param name="b">
+            Subtrahend of subtraction.
+            </param>
+            <returns>
+            New matrix beeing difference of source matrices.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.op_Subtraction(SARA.Core.FloatMatrix,System.Single)">
+            <summary>
+            Subtract constans from matrix.
+            </summary>
+            <remarks>
+            Subtract constans from all matrix cells. Operator does not change source matrix.
+            </remarks>
+            <param name="a">
+            Source matrix.
+            </param>
+            <param name="c">
+            A constans to subtract.
+            </param>
+            <returns>
+            A new matrix beeing result of subtraction.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.op_Subtraction(System.Single,SARA.Core.FloatMatrix)">
+            <summary>
+            Subtract matrix from constans (negate matrix and add constans).
+            </summary>
+            <remarks>
+            Matrix does not change source matrix.
+            </remarks>
+            <param name="c">
+            Constans.
+            </param>
+            <param name="a">
+            Matrix.
+            </param>
+            <returns>
+            A new matrix beeing result of subtraction.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.op_Multiply(SARA.Core.FloatMatrix,SARA.Core.FloatMatrix)">
+            <summary>
+            Multiply every cells of matrices.
+            </summary>
+            <remarks>
+            Multiply corresponding cells of matrices. It is not algebraic matrix multiply!
+            Matrices have to have same dimensions. Operator does not change source matrices.
+            </remarks>
+            <param name="a">
+            First factor.
+            </param>
+            <param name="b">
+            Second factor.
+            </param>
+            <returns>
+            New matrix beeing result of multiplication.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.op_Multiply(SARA.Core.FloatMatrix,System.Single)">
+            <summary>
+            Multiply matrix by scalar.
+            </summary>
+            <remarks>
+            Operator does not change source matrix.
+            </remarks>
+            <param name="a">
+            Matrix factor.
+            </param>
+            <param name="c">
+            Scalar factor.
+            </param>
+            <returns>
+            New scaled matrix.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.op_Multiply(System.Single,SARA.Core.FloatMatrix)">
+            <summary>
+            Multiply matrix by scalar.
+            </summary>
+            <remarks>
+            Operator does not change source matrix.
+            </remarks>
+            <param name="c">
+            Scalar factor.
+            </param>
+            <param name="a">
+            Matrix factor.
+            </param>       
+            <returns>
+            New scaled matrix.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.op_Division(SARA.Core.FloatMatrix,SARA.Core.FloatMatrix)">
+            <summary>
+            Divide matrices.
+            </summary>
+            <remarks>
+            Divide corresponding cells of matrices. It is not algebraic matrix division!
+            Matrices have to have same dimensions. Operator does not change source matrices.
+            </remarks>
+            <param name="a">
+            Divident matrix.
+            </param>
+            <param name="b">
+            Divisor matrix.
+            </param>
+            <returns>
+            New matrix beeing result of division.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.op_Division(SARA.Core.FloatMatrix,System.Single)">
+            <summary>
+            Divide matrix by scalar.
+            </summary>
+            <remarks>
+            Operator does not change source matrix.
+            </remarks>
+            <param name="a">
+            Divident matrix.
+            </param>
+            <param name="c">
+            Divisor scalar.
+            </param>
+            <returns>
+            New divided matrix.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.FloatMatrix.op_Division(System.Single,SARA.Core.FloatMatrix)">
+            <summary>
+            Divide scalar by matrix ((not algebraic) inverse matrix and multiply by scalar).
+            </summary>
+            <remarks>
+            Operator does not change source matrix.
+            </remarks>
+            <param name="c">
+            Matrix
+            </param>
+            <param name="a">
+            Scalar.</param>
+            <returns>
+            New matrix beeing result of division.
+            </returns>
+        </member>
+        <member name="P:SARA.Core.FloatMatrix.DataMatrix">
+            <summary>
+            Encapsulated DataMatrix.
+            </summary>
+        </member>
+        <member name="P:SARA.Core.FloatMatrix.Data">
+            <summary>
+            Data of matrix.
+            </summary>
+        </member>
+        <member name="P:SARA.Core.FloatMatrix.Dimensions">
+            <summary>
+            Dimensions of matrix.
+            </summary>
+        </member>
+        <member name="P:SARA.Core.FloatMatrix.Size">
+            <summary>
+            Number of pixels/cell on matrix.
+            </summary>
+        </member>
+        <member name="T:SARA.Core.DataSequence">
+            <summary>
+            Basic sequence processing.
+            </summary>
+        </member>
+        <member name="M:SARA.Core.DataSequence.GetFitsFloatMatrixSequence(System.String[])">
+            <summary>
+            Create new FloatMatrix sequence from FITS files.
+            </summary>
+            <param name="paths">
+            Paths array of paths to FITS files to create sequence.
+            </param>
+            <returns>
+            FloatMatrix sequence from FITS files.
+            </returns>
+        </member>
+        <member name="T:SARA.FITS.FitsFormatException">
+            <summary>
+            An exception that is throwed when format of FITS file or data is invalid.
+            </summary>
+        </member>
+        <member name="M:SARA.FITS.FitsFormatException.#ctor(System.String)">
+            <summary>
+            <see cref="T:SARA.FITS.FitsFormatException"/> constructor.
+            </summary>
+            <param name="message">
+            Message that describes an error.
+            </param>
+        </member>
+        <member name="T:SARA.FITS.FitsHeaderEntry">
+            <summary>
+            Entry of FITS header.
+            </summary>
+        </member>
+        <member name="M:SARA.FITS.FitsHeaderEntry.#ctor(System.Byte[])">
+            <summary>
+            Constructor that creates new <see cref="T:SARA.FITS.FitsHeaderEntry"/> from raw 80-bytes data.
+            </summary>
+            <param name="entryData">
+            Raw data of entry.
+            </param>
+        </member>
+        <member name="M:SARA.FITS.FitsHeaderEntry.ReadEntry(System.IO.BinaryReader)">
+            <summary>
+            Read <see cref="T:SARA.FITS.FitsHeaderEntry"/> from stream.
+            </summary>
+            <param name="reader">
+            Stream that contains a FITS header entry.
+            </param>
+            <returns>
+            Entry read from stream.
+            </returns>
+        </member>
+        <member name="P:SARA.FITS.FitsHeaderEntry.Keyword">
+            <summary>
+            Keyword in entry.
+            </summary>
+        </member>
+        <member name="P:SARA.FITS.FitsHeaderEntry.HasValue">
+            <summary>
+            Value indicating that entry contains any value.
+            </summary>
+        </member>
+        <member name="P:SARA.FITS.FitsHeaderEntry.HasBoolValue">
+            <summary>
+            Value indicating that entry contains bool value.
+            </summary>
+        </member>
+        <member name="P:SARA.FITS.FitsHeaderEntry.BoolValue">
+            <summary>
+            Bool value of entry.
+            </summary>
+        </member>
+        <member name="P:SARA.FITS.FitsHeaderEntry.HasIntValue">
+            <summary>
+            Value indicating that entry contains integer value.
+            </summary>
+        </member>
+        <member name="P:SARA.FITS.FitsHeaderEntry.IntValue">
+            <summary>
+            Integer value of entry.
+            </summary>
+        </member>
+        <member name="T:SARA.Fotometry.FotometryResult">
+            <summary>
+            Result of aperture fotometry.
+            </summary>
+        </member>
+        <member name="M:SARA.Fotometry.FotometryResult.#ctor(System.Single)">
+            <summary>
+            Create result of aperture fotometry (when background level is 0).
+            </summary>
+            <param name="total">
+            Total signal of star and background.
+            </param>
+        </member>
+        <member name="M:SARA.Fotometry.FotometryResult.#ctor(System.Single,System.Single)">
+            <summary>
+            Create result of aperture fotometry for normed background and total signal.
+            </summary>
+            <param name="background">
+            Signal of background.
+            </param>
+            <param name="total">
+            Total signal of star and background.
+            </param>
+        </member>
+        <member name="M:SARA.Fotometry.FotometryResult.#ctor(System.Single,System.Int32,System.Single,System.Int32)">
+            <summary>
+            Create result of aperture fotometry.
+            </summary>
+            <param name="background">
+            Signal of background.
+            </param>
+            <param name="bkgPixels">
+            Number of pixels used to measure background signal.
+            </param>
+            <param name="total">
+            Total signal of star and background.
+            </param>
+            <param name="totPixels">
+            Number of pixels used to measure total signal.
+            </param>
+        </member>
+        <member name="P:SARA.Fotometry.FotometryResult.Background">
+            <summary>
+            Normed signal of background.
+            </summary>
+        </member>
+        <member name="P:SARA.Fotometry.FotometryResult.Total">
+            <summary>
+            Normed total signal of star and background.
+            </summary>
+        </member>
+        <member name="P:SARA.Fotometry.FotometryResult.Signal">
+            <summary>
+            Normed signal of star (<see cref="P:SARA.Fotometry.FotometryResult.Total"/> - <see cref="P:SARA.Fotometry.FotometryResult.Background"/>).
+            </summary>
+        </member>
+        <member name="P:SARA.Fotometry.FotometryResult.Magnitudo">
+            <summary>
+            Star brightness in magnitudo.
+            </summary>
+        </member>
+        <member name="T:SARA.Fotometry.Aperture3R">
+            <summary>
+            Aperture for fotometry that use three circles: signal is measured in first, 
+            and background is measured in ring between second and third. 
+            </summary>
+        </member>
+        <member name="M:SARA.Fotometry.Aperture3R.#ctor(System.Single,System.Single,System.Single,SARA.Astrometry.IStarTracker)">
+            <summary>
+            Create new Aperture for fotometry.
+            </summary>
+            <param name="radius1">
+            Radius of circle to measure signal of star (and background).
+            </param>
+            <param name="radius2">
+            Inner radius of ring to measure background.
+            </param>
+            <param name="radius3">
+            Outer radius of ring to measure background.
+            </param>
+            <param name="star">
+            Measured star.
+            </param>
+        </member>
+        <member name="M:SARA.Fotometry.Aperture3R.GetResult(SARA.Core.FloatMatrix)">
+            <summary>
+            Measure brightness of star.
+            </summary>
+            <param name="image">
+            Image that contains measured star.
+            </param>
+            <returns>
+            Result of fotometry.
+            </returns>
+        </member>
+        <member name="P:SARA.Fotometry.Aperture3R.Radius1">
+            <summary>
+            Radius of circle to measure signal of star (and background).
+            </summary>
+        </member>
+        <member name="P:SARA.Fotometry.Aperture3R.Radius2">
+            <summary>
+            Inner radius of ring to measure background.
+            </summary>
+        </member>
+        <member name="P:SARA.Fotometry.Aperture3R.Radius3">
+            <summary>
+            Outer radius of ring to measure background.
+            </summary>
+        </member>
+        <member name="P:SARA.Fotometry.Aperture3R.Star">
+            <summary>
+            Measured star.
+            </summary>
+        </member>
+        <member name="T:SARA.FITS.FitsHeaderEntryException">
+            <summary>
+            An exception that can be throwed by <see cref="T:SARA.FITS.FitsHeaderEntry"/>.
+            </summary>
+        </member>
+        <member name="M:SARA.FITS.FitsHeaderEntryException.#ctor(System.String)">
+            <summary>
+            <see cref="T:SARA.FITS.FitsHeaderEntryException"/> constructor.
+            </summary>
+            <param name="message">
+            Message that describes an error.
+            </param>
+        </member>
+        <member name="T:SARA.Core.DataMatrix`1">
+            <summary>
+            Multi-dimensional matrix of data of specified type.
+            </summary>
+            <typeparam name="T">
+            Type of matrix cells. Should be one of basic types:
+            <see cref="T:System.Byte"/>, <see cref="T:System.SByte"/>, <see cref="T:System.UInt16"/>, <see cref="T:System.Int16"/>, 
+            <see cref="T:System.UInt32"/>, <see cref="T:System.Int32"/>, <see cref="T:System.UInt64"/>, <see cref="T:System.Int64"/>, 
+            <see cref="T:System.Single"/>, <see cref="T:System.Double"/> and <see cref="T:System.Decimal"/>.
+            </typeparam>
+        </member>
+        <member name="M:SARA.Core.DataMatrix`1.#ctor(System.Int32[])">
+            <summary>
+            Creates new matrix filled by zeros.
+            </summary>
+            <param name="dimensions">
+            Dimensions of matrix.
+            </param>
+        </member>
+        <member name="M:SARA.Core.DataMatrix`1.#ctor(System.Int32[],`0[])">
+            <summary>
+            Creates new matrix from data.
+            </summary>
+            <param name="dimensions">
+            Dimensions of matrix.
+            </param>
+            <param name="data">
+            Data to fill the matrix.
+            </param>
+        </member>
+        <member name="M:SARA.Core.DataMatrix`1.Convert``1">
+            <summary>
+            Convert to DataMatrix of specified type.
+            </summary>
+            <typeparam name="Out">
+            Output type of DataMatrix.
+            </typeparam>
+            <returns>
+            DataMatrix converted to specified type.
+            </returns>
+        </member>
+        <member name="M:SARA.Core.DataMatrix`1.Copy">
+            <summary>
+            Create copy of matrix.
+            </summary>
+            <returns>
+            Copy of matrix.
+            </returns>
+        </member>
+        <member name="P:SARA.Core.DataMatrix`1.Data">
+            <summary>
+            Data of matrix.
+            </summary>
+        </member>
+        <member name="P:SARA.Core.DataMatrix`1.Size">
+            <summary>
+            Number of pixels/cells on matrix.
+            </summary>
+        </member>
+        <member name="P:SARA.Core.DataMatrix`1.Dimensions">
+            <summary>
+            Dimensions of matrix.
+            </summary>
+        </member>
+        <member name="T:SARA.Fotometry.FotometryException">
+            <summary>
+            An exception that can be throwed at fotometry.
+            </summary>
+        </member>
+        <member name="M:SARA.Fotometry.FotometryException.#ctor(System.String)">
+            <summary>
+            <see cref="T:SARA.Fotometry.FotometryException"/> constructor.
+            </summary>
+            <param name="message">
+            Message that describes an error.
+            </param>
+        </member>
+        <member name="T:SARA.Astrometry.StarTrackerByMax">
+            <summary>
+            Simple and fast star tracker that find star by maximum value on pixel.
+            </summary>
+            <remarks>
+            For this tracker, position of object is a position of brightness pixel. 
+            Its fast method, but not the best. When seeing was bad, stars take up lot of
+            pixels on image and this method do not show center of star. Moreover this
+            method is very sensitive about cosmics.
+            </remarks>
+        </member>
+        <member name="M:SARA.Astrometry.StarTrackerByMax.#ctor(SARA.Core.Vector2D)">
+            <summary>
+            Creates StarTrackerByMax with no Reference and default Tolerance.
+            </summary>
+            <param name="position">
+            Initial position of tracked object.
+            </param>
+        </member>
+        <member name="M:SARA.Astrometry.StarTrackerByMax.#ctor(SARA.Core.Vector2D,System.Single)">
+            <summary>
+            Creates StarTrackerByMax with no Reference.
+            </summary>
+            <param name="position">
+            Initial position of tracked object.
+            </param>
+            <param name="tolerance">
+            Tolerance in star tracking.
+            </param>
+        </member>
+        <member name="M:SARA.Astrometry.StarTrackerByMax.#ctor(SARA.Core.Vector2D,SARA.Astrometry.IStarTracker)">
+            <summary>
+            Creates StarTrackerByMax for static object(star) with default Tolerance.
+            </summary>
+            <param name="position">
+            Initial position of tracked object.
+            </param>
+            <param name="reference">
+            Reference star in tracking, null means no reference.
+            </param>
+        </member>
+        <member name="M:SARA.Astrometry.StarTrackerByMax.#ctor(SARA.Core.Vector2D,System.Single,SARA.Astrometry.IStarTracker)">
+            <summary>
+            Creates StarTrackerByMax for static object(star).
+            </summary>
+            <param name="position">
+            Initial position of tracked object.
+            </param>
+            <param name="tolerance">
+            Tolerance in star tracking.
+            </param>
+            <param name="reference">
+            Reference star in tracking, null means no reference.
+            </param>
+        </member>
+        <member name="M:SARA.Astrometry.StarTrackerByMax.#ctor(SARA.Core.Vector2D,SARA.Astrometry.IStarTracker,System.Boolean)">
+            <summary>
+            Creates StarTrackerByMax with default Tolerance.
+            </summary>
+            <param name="position">
+            Initial position of tracked object.
+            </param>
+            <param name="reference">
+            Reference star in tracking, null means no reference.
+            </param>
+            <param name="movable">
+            Flag sets for movable object (planetoids, minor planets) and clear for static objects (stars).
+            </param>
+        </member>
+        <member name="M:SARA.Astrometry.StarTrackerByMax.#ctor(SARA.Core.Vector2D,System.Single,SARA.Astrometry.IStarTracker,System.Boolean)">
+            <summary>
+            Creates StarTrackerByMax.
+            </summary>
+            <param name="position">
+            Initial position of tracked object.
+            </param>
+            <param name="tolerance">
+            Tolerance in star tracking.
+            </param>
+            <param name="reference">
+            Reference star in tracking, null means no reference.
+            </param>
+            <param name="movable">
+            Flag sets for movable object (planetoids, minor planets) and clear for static objects (stars)
+            </param>
+        </member>
+        <member name="M:SARA.Astrometry.StarTrackerByMax.#ctor(SARA.Core.Vector2D,SARA.Astrometry.IStarTracker,SARA.Core.Vector2D)">
+            <summary>
+            Creates StarTrackerByMax for static object(star) with default Tolerance.
+            </summary>
+            <param name="position">
+            Initial position of tracked object.
+            </param>
+            <param name="reference">
+            Reference star in tracking, null means no reference.
+            </param>
+            <param name="relPosition">
+            Position relative to reference star.
+            </param>
+        </member>
+        <member name="M:SARA.Astrometry.StarTrackerByMax.#ctor(SARA.Core.Vector2D,System.Single,SARA.Astrometry.IStarTracker,SARA.Core.Vector2D)">
+            <summary>
+            Creates StarTrackerByMax for static object(star).
+            </summary>
+            <param name="position">
+            Initial position of tracked object.
+            </param>
+            <param name="tolerance">
+            Tolerance in star tracking.
+            </param>
+            <param name="reference">
+            Reference star in tracking, null means no reference.
+            </param>
+            <param name="relPosition">
+            Position relative to reference star.
+            </param>
+        </member>
+        <member name="M:SARA.Astrometry.StarTrackerByMax.#ctor(SARA.Core.Vector2D,SARA.Astrometry.IStarTracker,System.Boolean,SARA.Core.Vector2D)">
+            <summary>
+            Creates StarTrackerByMax with default Tolerance.
+            </summary>
+            <param name="position">
+            Initial position of tracked object.
+            </param>
+            <param name="reference">
+            Reference star in tracking, null means no reference.
+            </param>
+            <param name="movable">
+            Flag sets for movable object (planetoids, minor planets) and clear for static objects (stars).
+            </param>
+            <param name="relPosition">
+            Position relative to reference star.
+            </param>
+        </member>
+        <member name="M:SARA.Astrometry.StarTrackerByMax.#ctor(SARA.Core.Vector2D,System.Single,SARA.Astrometry.IStarTracker,System.Boolean,SARA.Core.Vector2D)">
+            <summary>
+            Creates StarTrackerByMax.
+            </summary>
+            <param name="position">
+            Initial position of tracked object.
+            </param>
+            <param name="tolerance">
+            Tolerance in star tracking.
+            </param>
+            <param name="reference">
+            Reference star in tracking, null means no reference.
+            </param>
+            <param name="movable">
+            Flag sets for movable object (planetoids, minor planets) and clear for static objects (stars).
+            </param>
+            <param name="relPosition">
+            Position relative to reference star.
+            </param>
+        </member>
+        <member name="M:SARA.Astrometry.StarTrackerByMax.Track(SARA.Core.FloatMatrix)">
+            <summary>
+            Track star method
+            </summary>
+            <remarks>
+            Find selected star on image. Updates Position property, when Movable flag is set, and Reference is not null, 
+            also updates RelPosition property.
+            </remarks>
+            <param name="image">
+            An image to find selected star.
+            </param>
+            <exception cref="T:System.ArgumentException">
+            Thrown when specified image is not 2D matrix.
+            </exception>
+            <exception cref="T:SARA.Astrometry.StarEscapedException">
+            Thrown when field where star is looking for is completly out of image.
+            </exception>
+        </member>
+        <member name="P:SARA.Astrometry.StarTrackerByMax.Tolerance">
+            <summary>
+            Tolerace in star tracking.
+            </summary>
+            <remarks>
+            Determines maximum distance between looking for and expected star position.
+            </remarks>
+            <seealso cref="P:SARA.Astrometry.StarTrackerByMax.Reference"/>
+            <seealso cref="P:SARA.Astrometry.StarTrackerByMax.Movable"/>
+            <seealso cref="P:SARA.Astrometry.StarTrackerByMax.RelPosition"/>
+        </member>
+        <member name="P:SARA.Astrometry.StarTrackerByMax.Reference">
+            <summary>
+            Reference star in tracking.
+            </summary>
+            <remarks>
+            When reference is set, expected position of star is calculated by formula : Reference.Position + RelPosition.
+            Otherwise when Reference is null, expected position is last position of star.
+            
+            On set, RelPosition is updated.
+            </remarks>
+            <seealso cref="P:SARA.Astrometry.StarTrackerByMax.Movable"/>
+            <seealso cref="P:SARA.Astrometry.StarTrackerByMax.RelPosition"/>
+        </member>
+        <member name="P:SARA.Astrometry.StarTrackerByMax.Movable">
+            <summary>
+            Flag sets for movable object (planetoids, minor planets) and clear for static objects (stars).
+            </summary>
+            <remarks>
+            When this flag is set, Track method updates RelPosition after tracking. When Reference is null, this flag is ignored.
+            </remarks>
+            <seealso cref="P:SARA.Astrometry.StarTrackerByMax.Reference"/>
+            <seealso cref="P:SARA.Astrometry.StarTrackerByMax.RelPosition"/>
+            <seealso cref="M:SARA.Astrometry.StarTrackerByMax.Track(SARA.Core.FloatMatrix)"/>
+        </member>
+        <member name="P:SARA.Astrometry.StarTrackerByMax.RelPosition">
+            <summary>
+            Relative position of star by reference star.
+            </summary>
+            <remarks>
+            Determines expected position of star using position of reference star. When Reference is null, this value is ignored.
+            </remarks>
+            <seealso cref="P:SARA.Astrometry.StarTrackerByMax.Reference"/>
+            <seealso cref="P:SARA.Astrometry.StarTrackerByMax.Movable"/>
+        </member>
+        <member name="P:SARA.Astrometry.StarTrackerByMax.Position">
+            <summary>
+            Last position of selected star.
+            </summary>
+            <remarks>
+            Value updated every Track method call.
+            </remarks>
+        </member>
+        <member name="T:SARA.Astrometry.StarEscapedException">
+            <summary>
+            An exception throwed when star escape out of image.
+            </summary>
+            <remarks>
+            This exception can be throwed when IStarTracker lost star, because it escapes out of image.
+            </remarks>
+        </member>
+        <member name="M:SARA.Astrometry.StarEscapedException.#ctor(System.String)">
+            <summary>
+            Constructor that creates new StarEscapeException.
+            <param name="message">
+            </param>
+            Message that describes an error.
+            </summary>
+        </member>
+        <member name="T:SARA.BasicReduction">
+            <summary>
+            Static class with method of basic reduction.
+            </summary>
+        </member>
+        <member name="M:SARA.BasicReduction.SequenceMean(System.Collections.Generic.IEnumerable{SARA.Core.FloatMatrix})">
+            <summary>
+            Calculate mean image of sequene (every pixel contains mean of corresponding pixels values from sequence).
+            </summary>
+            <param name="sequecne">
+            Sequence to calculate mean. Every images have to have same dimensions.
+            </param>
+            <returns>
+            Mean of sequence.
+            </returns>
+        </member>
+        <member name="M:SARA.BasicReduction.SequenceSum(System.Collections.Generic.IEnumerable{SARA.Core.FloatMatrix})">
+            <summary>
+            Calculate sum of images in sequene (every pixel contains sum of corresponding pixels values from sequence).
+            </summary>
+            <param name="sequecne">
+            Sequence to calculate sum. Every images have to have same dimensions.
+            </param>
+            <returns>
+            Sum of sequence.
+            </returns>
+        </member>
+        <member name="M:SARA.BasicReduction.NormImage(SARA.Core.FloatMatrix)">
+            <summary>
+            Norm image. Create new image from specified image, where mean value of pixels is 1. Function does not change source image.
+            </summary>
+            <param name="image">
+            Image to norm.
+            </param>
+            <returns>
+            Normed image.
+            </returns>
+        </member>
+        <member name="M:SARA.BasicReduction.MasterBias(System.Collections.Generic.IEnumerable{SARA.Core.FloatMatrix})">
+            <summary>
+            Calculate master bias of bias sequence. Master bias is a mean of sequene, so that function
+            encapsulates <see cref="M:SARA.BasicReduction.SequenceMean(System.Collections.Generic.IEnumerable{SARA.Core.FloatMatrix})"/>.
+            </summary>
+            <param name="biasSequecne">
+            Sequence of bias images.
+            </param>
+            <returns>
+            Calculated master bias.
+            </returns>
+        </member>
+        <member name="M:SARA.BasicReduction.MasterFlat(System.Collections.Generic.IEnumerable{SARA.Core.FloatMatrix},SARA.Core.FloatMatrix)">
+            <summary>
+            Calculate master flat of specified flat sequence. Function subtract bias from every flat image,
+            and returns normed sum of obtained images.
+            </summary>
+            <param name="flatSequence">
+            Sequence of flat images.
+            </param>
+            <param name="bias">
+            master bias for flat.
+            </param>
+            <returns>
+            Calculated master flat.
+            </returns>
+        </member>
+        <member name="M:SARA.BasicReduction.MasterFlat(System.Collections.Generic.IEnumerable{SARA.Core.FloatMatrix},System.Collections.Generic.IEnumerable{SARA.Core.FloatMatrix})">
+            <summary>
+            Calculate master flat of specified flat sequence. Function calculate master bias for flat, subtract it from every flat image,
+            and returns normed sum of obtained images.
+            </summary>
+            <param name="flatSequence">
+            Sequence of flat images.
+            </param>
+            <param name="biasSequence">
+            Sequence of bias images for flat.
+            </param>
+            <returns>
+            Calculated master flat.
+            </returns>
+        </member>
+        <member name="M:SARA.BasicReduction.MasterFlat(System.Collections.Generic.IEnumerable{SARA.Core.FloatMatrix})">
+            <summary>
+            Calcule master flat of flat sequence. Flat is normed sum of images, so you can use
+            <c>NormImage(SequenceSum(<paramref name="flatSequence"/>))</c>,
+            but this function is a little bit faster and more pretty.
+            </summary>
+            <param name="flatSequence">
+            Sequence of flat images.
+            </param>
+            <returns>
+            Calculated master flat.
+            </returns>
+        </member>
+        <member name="M:SARA.BasicReduction.Debias(System.Collections.Generic.IEnumerable{SARA.Core.FloatMatrix},SARA.Core.FloatMatrix)">
+            <summary>
+            Debias data. Subtract master bias from every image in sequence.
+            </summary>
+            <param name="dataSequence">
+            Data to debias.
+            </param>
+            <param name="masterBias">
+            Master bias for specified data.
+            </param>
+            <returns>
+            Sequence of debiased data.
+            </returns>
+        </member>
+        <member name="M:SARA.BasicReduction.Deflat(System.Collections.Generic.IEnumerable{SARA.Core.FloatMatrix},SARA.Core.FloatMatrix)">
+            <summary>
+            Deflat data. Divide every image in sequence by master flat.
+            </summary>
+            <param name="dataSequence">
+            Data to daflat.
+            </param>
+            <param name="masterFlat">
+            Master flat for specified data.
+            </param>
+            <returns>
+            Sequence of deflated data.
+            </returns>
+        </member>
+        <member name="M:SARA.BasicReduction.Reduct(System.Collections.Generic.IEnumerable{SARA.Core.FloatMatrix},SARA.Core.FloatMatrix,SARA.Core.FloatMatrix)">
+            <summary>
+            Debias and deflat data.
+            </summary>
+            <param name="dataSequence">
+            Data to reduct.
+            </param>
+            <param name="masterBias">
+            Master bias for specified data.
+            </param>
+            <param name="masterFlat">
+            Master flat for specified data.
+            </param>
+            <returns>
+            Reducted data.
+            </returns>
+        </member>
+        <member name="T:SARA.Utils.ConfigFile">
+            <summary>
+            Configure file, that contains parametrs for program.
+            </summary>
+            <remarks>
+            Syntax of configure files:
+            <list type="bullet">
+            <item>comment lines starts with '<c>#</c>'.</item>
+            <item>empty lines are ignored.</item>
+            <item>other lines should have syntax: <c>parametr_name = value</c></item>
+            <item>parametr names must start with letter or underscore ('<c>_</c>'), and can contains only letters, 
+            digits and underscore.</item>
+            <item>case of letters is significant.</item>
+            <item>the same parametr can not be defined many times.</item>
+            </list>
+            
+            <example>
+            <code>
+            # This is comment.
+            #This is also valid comment.
+            
+            # example integer value:
+            int_value    = 7
+            # example float value:
+            float_value  = 1.5
+            # example bool value
+            bool_value   = True
+            # exmaple string value:
+            string_value = "Hello World!!!"
+            
+            # path seqences have more complex syntax.
+            # Possibile ways to describe sequences are:
+            
+            # * Simple file name
+            single_file = "foo.bar"
+            
+            # * File name pattern
+            sequence1 = "file*.txt"
+            
+            # * Indexed sequence (for example a1.fit, a2.fit, ... , a523.fit)
+            sequence2 = "a&lt;523&gt;.fit"
+            
+            # * Paths stored in other file:
+            sequence3 = @"files.txt"
+            
+            </code>
+            </example>
+            </remarks>
+        </member>
+        <member name="M:SARA.Utils.ConfigFile.#ctor(System.String)">
+            <summary>
+            Open and parse specified configure file.
+            </summary>
+            <param name="path">
+            Path to configure file.
+            </param>
+        </member>
+        <member name="M:SARA.Utils.ConfigFile.GetIntParam(System.String)">
+            <summary>
+            Get integer value of parametr.
+            </summary>
+            <remarks>
+            Syntax of integer value:
+            <code>
+            intValue ::= [sign] {digit}
+            </code>
+            </remarks>
+            <param name="paramName">
+            Name of parametr.
+            </param>
+            <returns>
+            Integer value of specified parametr.
+            </returns>
+        </member>
+        <member name="M:SARA.Utils.ConfigFile.GetBoolParam(System.String)">
+            <summary>
+            Get bool value of parametr.
+            </summary>
+            <remarks>
+            Syntax of bool value:
+            <code>
+            boolValue ::= "True" | "False"
+            </code>
+            </remarks>
+            <param name="paramName">
+            Name of parametr.
+            </param>
+            <returns>
+            Bool value of specified parametr.
+            </returns>
+        </member>
+        <member name="M:SARA.Utils.ConfigFile.GetFloatParam(System.String)">
+            <summary>
+            Get floating point value of parametr.
+            </summary>
+            <param name="paramName">
+            Name of parametr.
+            </param>
+            <remarks>
+            Syntax of floating point value:
+            <code>
+            floatValue ::= [sign] {digit} [ '.' [{ digit }] ] [ ('e' | 'E') [sign] {digit} ]
+            </code>
+            </remarks>
+            <returns>
+            Floating point value of specified parametr.
+            </returns>
+        </member>
+        <member name="M:SARA.Utils.ConfigFile.GetStringParam(System.String)">
+            <summary>
+            Get string value of parametr.
+            </summary>
+            <remarks>
+            If value of parametrs contains character '<c>"</c>', function returns parsed string between first and 
+            last '<c>"</c>' character (when string contains only one '<c>"</c>' character, function returns empty string).
+            Otherwise function returns all string.
+            
+            String parser repeace folowing sequences:
+            <list type="bullet">
+            <item>"<c>\\</c>" by "<c>\</c>".</item>
+            <item>"<c>\n</c>" by new line.</item>
+            <item>"<c>\r</c>" by carrige return.</item>
+            <item>"<c>\t</c>" by horizontal tab.</item>
+            </list>
+            </remarks>
+            <param name="paramName">
+            Name of parametr.
+            </param>
+            <returns>
+            String value of specified parametr.
+            </returns>
+        </member>
+        <member name="M:SARA.Utils.ConfigFile.GetPathsParam(System.String)">
+            <summary>
+            Get path sequence value of parametr.
+            </summary>
+            <remarks>
+            TODO: describe syntax.
+            </remarks>
+            <param name="paramName">
+            Name of parametr.
+            </param>
+            <returns>
+            Path sequence value of specified parametr.
+            </returns>
+        </member>
+        <member name="T:SARA.FITS.FitsFile">
+            <summary>
+            Data of FITS file. FITS (Flexibile Image Transport System) is popular format of images in astronomy.
+            </summary>
+        </member>
+        <member name="M:SARA.FITS.FitsFile.#ctor(System.String)">
+            <summary>
+            Open and read FITS file.
+            </summary>
+            <param name="path">
+            The path to FITS file.
+            </param>
+        </member>
+        <member name="P:SARA.FITS.FitsFile.Header">
+            <summary>
+            Header of FITS file.
+            </summary>
+        </member>
+        <member name="P:SARA.FITS.FitsFile.Data">
+            <summary>
+            Main data of FITS file.
+            </summary>
+        </member>
+    </members>
+</doc>

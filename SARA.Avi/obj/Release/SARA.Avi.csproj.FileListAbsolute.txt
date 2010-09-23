@@ -1,0 +1,9 @@
+D:\ProjektyCS\SARA\SARA.Avi\obj\Release\ResolveAssemblyReference.cache
+D:\ProjektyCS\SARA\SARA.Avi\bin\Release\SARA.Avi.dll
+D:\ProjektyCS\SARA\SARA.Avi\bin\Release\SARA.Avi.pdb
+D:\ProjektyCS\SARA\SARA.Avi\obj\Release\SARA.Avi.dll
+D:\ProjektyCS\SARA\SARA.Avi\obj\Release\SARA.Avi.pdb
+D:\ProjektyCS\SARA\SARA.Avi\bin\Release\SARA.dll
+D:\ProjektyCS\SARA\SARA.Avi\bin\Release\SARA.pdb
+D:\ProjektyCS\SARA\SARA.Avi\bin\Release\SARA.xml
+D:\ProjektyCS\SARA\SARA.Avi\bin\Release\SARA.Avi.XML

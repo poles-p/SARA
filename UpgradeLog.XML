@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="SARA">
+</Property><Property Name="Solution File" Value="D:\ProjektyCS\SARA\SARA.sln">
+</Property><Property Name="User Options File" Value="D:\ProjektyCS\SARA\SARA.suo">
+</Property><Property Name="Date" Value="18 września 2010">
+</Property><Property Name="Time" Value="19:28">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="SARA.sln" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.sln">
+</Event><Event ErrorLevel="0" Project="" Source="SARA.suo" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.suo">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\SARA.csproj" Description="Project file successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\SARA.csproj">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Astrometry\IStarTracker.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Astrometry\IStarTracker.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Astrometry\StarEscapedException.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Astrometry\StarEscapedException.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Astrometry\StarTrackerByMax.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Astrometry\StarTrackerByMax.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Astrometry\StarTrackerException.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Astrometry\StarTrackerException.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\BasicReduction.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\BasicReduction.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Core\BaseTypeOperations.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Core\BaseTypeOperations.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Core\DataMatrix.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Core\DataMatrix.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Core\DataSequence.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Core\DataSequence.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Core\Vector2D.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Core\Vector2D.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\FITS\FitsFile.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\FITS\FitsFile.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\FITS\FitsFormatException.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\FITS\FitsFormatException.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\FITS\FitsHeader.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\FITS\FitsHeader.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\FITS\FitsHeaderEntry.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\FITS\FitsHeaderEntry.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\FITS\FitsHeaderEntryException.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\FITS\FitsHeaderEntryException.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Core\BaseDataMatrix.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Core\BaseDataMatrix.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Core\FloatMatrix.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Core\FloatMatrix.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Fotometry\Aperture3R.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Fotometry\Aperture3R.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Fotometry\FotometryException.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Fotometry\FotometryException.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Fotometry\FotometryResult.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Fotometry\FotometryResult.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Fotometry\IAperture.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Fotometry\IAperture.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\Utils\ConfigFile.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA\Utils\ConfigFile.cs">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\SARA.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SARA" Source="SARA\SARA.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SARA.Drawing" Source="SARA.Drawing\SARA.Drawing.csproj" Description="Project file successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Drawing\SARA.Drawing.csproj">
+</Event><Event ErrorLevel="0" Project="SARA.Drawing" Source="SARA.Drawing\IMatrixDrawer.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Drawing\IMatrixDrawer.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Drawing" Source="SARA.Drawing\LinearMatrixDrawer.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Drawing\LinearMatrixDrawer.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Drawing" Source="SARA.Drawing\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Drawing\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Drawing" Source="SARA.Drawing\SARA.Drawing.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SARA.Drawing" Source="SARA.Drawing\SARA.Drawing.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SARA.SimpleGUI" Source="SARA.SimpleGUI\SARA.SimpleGUI.csproj" Description="Project file successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.SimpleGUI\SARA.SimpleGUI.csproj">
+</Event><Event ErrorLevel="0" Project="SARA.SimpleGUI" Source="SARA.SimpleGUI\Image\ImageForm.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.SimpleGUI\Image\ImageForm.cs">
+</Event><Event ErrorLevel="0" Project="SARA.SimpleGUI" Source="SARA.SimpleGUI\Image\ImageWindow.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.SimpleGUI\Image\ImageWindow.cs">
+</Event><Event ErrorLevel="0" Project="SARA.SimpleGUI" Source="SARA.SimpleGUI\Plot\DataSet.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.SimpleGUI\Plot\DataSet.cs">
+</Event><Event ErrorLevel="0" Project="SARA.SimpleGUI" Source="SARA.SimpleGUI\Plot\IPlotPoint.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.SimpleGUI\Plot\IPlotPoint.cs">
+</Event><Event ErrorLevel="0" Project="SARA.SimpleGUI" Source="SARA.SimpleGUI\Plot\PlotForm.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.SimpleGUI\Plot\PlotForm.cs">
+</Event><Event ErrorLevel="0" Project="SARA.SimpleGUI" Source="SARA.SimpleGUI\Plot\PlotPanel.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.SimpleGUI\Plot\PlotPanel.cs">
+</Event><Event ErrorLevel="0" Project="SARA.SimpleGUI" Source="SARA.SimpleGUI\Plot\PlotPointCross.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.SimpleGUI\Plot\PlotPointCross.cs">
+</Event><Event ErrorLevel="0" Project="SARA.SimpleGUI" Source="SARA.SimpleGUI\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.SimpleGUI\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="SARA.SimpleGUI" Source="SARA.SimpleGUI\SARA.SimpleGUI.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SARA.SimpleGUI" Source="SARA.SimpleGUI\SARA.SimpleGUI.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="AutoFoto0" Source="AutoFoto0\AutoFoto0.csproj" Description="Project file successfully backed up as D:\ProjektyCS\SARA\Backup\AutoFoto0\AutoFoto0.csproj">
+</Event><Event ErrorLevel="0" Project="AutoFoto0" Source="AutoFoto0\AutoFoto0.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\AutoFoto0\AutoFoto0.cs">
+</Event><Event ErrorLevel="0" Project="AutoFoto0" Source="AutoFoto0\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\AutoFoto0\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="AutoFoto0" Source="AutoFoto0\AutoFoto0.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="AutoFoto0" Source="AutoFoto0\AutoFoto0.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\SARA.Avi.csproj" Description="Project file successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\SARA.Avi.csproj">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\AudioStream.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\AudioStream.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\AviException.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\AviException.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\AviFile.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\AviFile.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\AviStream.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\AviStream.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\AviMarshal\AviFil32.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\AviMarshal\AviFil32.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\AviMarshal\AVISTREAMINFO.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\AviMarshal\AVISTREAMINFO.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\AviMarshal\BITMAPINFOHEADER.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\AviMarshal\BITMAPINFOHEADER.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\FrameGrabber.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\FrameGrabber.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\MidiStream.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\MidiStream.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\AviMarshal\RECT.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\AviMarshal\RECT.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\TextStream.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\TextStream.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\VideoStream.cs" Description="File successfully backed up as D:\ProjektyCS\SARA\Backup\SARA.Avi\VideoStream.cs">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\SARA.Avi.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="SARA.Avi" Source="SARA.Avi\SARA.Avi.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="SARA.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="SARA.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="SARA" Source="SARA\SARA.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SARA.Drawing" Source="SARA.Drawing\SARA.Drawing.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SARA.SimpleGUI" Source="SARA.SimpleGUI\SARA.SimpleGUI.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="AutoFoto0" Source="AutoFoto0\AutoFoto0.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="SARA.Avi" Source="SARA.Avi\SARA.Avi.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

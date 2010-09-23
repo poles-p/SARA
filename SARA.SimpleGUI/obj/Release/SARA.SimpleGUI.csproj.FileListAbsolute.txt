@@ -1,0 +1,12 @@
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.SimpleGUI.dll
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.SimpleGUI.pdb
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.dll
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.Drawing.dll
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.Drawing.pdb
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.pdb
+D:\ProjektyCS\SARA\SARA.SimpleGUI\obj\Release\ResolveAssemblyReference.cache
+D:\ProjektyCS\SARA\SARA.SimpleGUI\obj\Release\SARA.SimpleGUI.dll
+D:\ProjektyCS\SARA\SARA.SimpleGUI\obj\Release\SARA.SimpleGUI.pdb
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.Drawing.xml
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.xml
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.SimpleGUI.XML

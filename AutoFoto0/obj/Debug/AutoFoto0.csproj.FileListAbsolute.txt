@@ -1,0 +1,13 @@
+D:\ProjektyCS\SARA\AutoFoto0\obj\Debug\ResolveAssemblyReference.cache
+D:\ProjektyCS\SARA\AutoFoto0\bin\Debug\AutoFoto0.exe
+D:\ProjektyCS\SARA\AutoFoto0\bin\Debug\AutoFoto0.pdb
+D:\ProjektyCS\SARA\AutoFoto0\bin\Debug\SARA.dll
+D:\ProjektyCS\SARA\AutoFoto0\bin\Debug\SARA.Drawing.dll
+D:\ProjektyCS\SARA\AutoFoto0\bin\Debug\SARA.SimpleGUI.dll
+D:\ProjektyCS\SARA\AutoFoto0\bin\Debug\SARA.Drawing.pdb
+D:\ProjektyCS\SARA\AutoFoto0\bin\Debug\SARA.SimpleGUI.pdb
+D:\ProjektyCS\SARA\AutoFoto0\bin\Debug\SARA.pdb
+D:\ProjektyCS\SARA\AutoFoto0\obj\Debug\AutoFoto0.exe
+D:\ProjektyCS\SARA\AutoFoto0\obj\Debug\AutoFoto0.pdb
+D:\ProjektyCS\SARA\AutoFoto0\bin\Debug\SARA.Avi.dll
+D:\ProjektyCS\SARA\AutoFoto0\bin\Debug\SARA.Avi.pdb

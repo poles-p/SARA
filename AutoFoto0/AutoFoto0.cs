@@ -80,8 +80,15 @@ namespace SARA.Programs
                 Console.WriteLine("Usage :\n>AutoFoto0 <configFile>\n\n");
             else
             {
-                AutoFoto0 program = new AutoFoto0(args[0]);
-                program.Run();
+                try
+                {
+                    AutoFoto0 program = new AutoFoto0(args[0]);
+                    program.Run();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             }
         }
 
@@ -89,7 +96,7 @@ namespace SARA.Programs
         {
             // open config file
             _configFile = new ConfigFile(configFilePath);
-            
+
             // read parametrs
             ReadParametrs();
 
@@ -101,11 +108,11 @@ namespace SARA.Programs
         {
             // read data
             {
-                string [] dataPaths = _configFile.GetPathsParam("Data");
+                string[] dataPaths = _configFile.GetPathsParam("Data");
                 _objectData = GetSequence(dataPaths);
                 if ((_configFile.GetBoolParam("UseFlat") && _configFile.GetBoolParam("UseFlat2"))
                     || (_configFile.GetBoolParam("UseDark") && _configFile.GetBoolParam("UseDark2")))
-                        _objectDataLength = GetSequenceLength(dataPaths);
+                    _objectDataLength = GetSequenceLength(dataPaths);
             }
 
             // dark processing
@@ -253,6 +260,39 @@ namespace SARA.Programs
 
                 plot.ShowDialog();
             }
+
+            if (_configFile.GetBoolParam("SaveResults"))
+            {
+                IEnumerator<Vector2D>[] res = new IEnumerator<Vector2D>[results.Length];
+                for (int i = 0; i < res.Length; i++)
+                {
+                    res[i] = results[i].GetEnumerator();
+                    res[i].Reset();
+                    if (!res[i].MoveNext())
+                        res[i] = null;
+                }
+
+                StreamWriter writer = File.CreateText(_configFile.GetStringParam("OutputFile"));
+
+                for (int num = 0; num < id; num++)
+                {
+                    writer.Write(num);
+                    for (int i = 0; i < res.Length; i++)
+                    {
+                        if (res[i] != null && res[i].Current.X == (float)num)
+                        {
+                            writer.Write("\t{0}", res[i].Current.Y);
+                            if (!res[i].MoveNext())
+                                res[i] = null;
+                        }
+                        else
+                            writer.Write("\t---------");
+                    }
+                    writer.WriteLine();
+                }
+
+                writer.Close();
+            }
         }
 
         private void ReadParametrs()
@@ -334,8 +374,8 @@ namespace SARA.Programs
                     break;
                 case "AVI":
                     foreach (string path in paths)
-                            foreach (FloatMatrix frame in (new AviFile(path)).GetVideoStream().GetAllFrames())
-                                yield return frame;
+                        foreach (FloatMatrix frame in (new AviFile(path)).GetVideoStream().GetAllFrames())
+                            yield return frame;
                     break;
                 default:
                     throw new ArgumentException("Unknown file format : " + _inputFormat);
@@ -389,8 +429,8 @@ namespace SARA.Programs
         {
             if (length <= 1)
             {
-                FloatMatrix bias = bias1*0.5f;
-                bias.Add(bias2*0.5f);
+                FloatMatrix bias = bias1 * 0.5f;
+                bias.Add(bias2 * 0.5f);
 
                 foreach (FloatMatrix image in source)
                 {

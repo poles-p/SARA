@@ -1,0 +1,741 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SARA.Avi</name>
+    </assembly>
+    <members>
+        <member name="T:SARA.Avi.AviMarshal.AVISTREAMINFO">
+            <summary>
+            Marshal of AVISTREAMINFO structure. Contains information for a single stream.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd756832(VS.85).aspx">MSDN</a>.
+            </remarks>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.fccType">
+            <summary>
+            Four-character code indicating the stream type.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.fccHandler">
+            <summary>
+            Four-character code of the compressor handler that will compress this video stream when it is saved.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.dwFlags">
+            <summary>
+            Applicable flags for the stream.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.dwCaps">
+            <summary>
+            Capability flags; currently unused.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.wPriority">
+            <summary>
+            Priority of the stream.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.wLanguage">
+            <summary>
+            Language of the stream.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.dwScale">
+            <summary>
+            Time scale applicable for the stream.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.dwRate">
+            <summary>
+            Rate in an integer format.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.dwStart">
+            <summary>
+            Sample number of the first frame of the AVI file.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.dwLength">
+            <summary>
+            Length of this stream.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.dwInitialFrames">
+            <summary>
+            Audio skew.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.dwSuggestedBufferSize">
+            <summary>
+            Recommended buffer size, in bytes, for the stream.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.dwQuality">
+            <summary>
+            Quality indicator of the video data in the stream.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.dwSampleSize">
+            <summary>
+            Size, in bytes, of a single data sample.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.rcFrame">
+            <summary>
+            Dimensions of the video destination rectangle.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.dwEditCount">
+            <summary>
+            Number of times the stream has been edited.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.dwFormatChangeCount">
+            <summary>
+            Number of times the stream format has changed.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AVISTREAMINFO.szName">
+            <summary>
+            Number of times the stream format has changed.
+            </summary>
+        </member>
+        <member name="T:SARA.Avi.AviMarshal.RECT">
+            <summary>
+            Marshal of RECT structure.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd162897(VS.85).aspx">MSDN</a>.
+            </remarks>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.RECT.left">
+            <summary>
+            The x-coordinate of the upper-left corner of the rectangle.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.RECT.top">
+            <summary>
+            The y-coordinate of the upper-left corner of the rectangle.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.RECT.right">
+            <summary>
+            The x-coordinate of the lower-right corner of the rectangle.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.RECT.bottom">
+            <summary>
+            The y-coordinate of the lower-right corner of the rectangle.
+            </summary>
+        </member>
+        <member name="T:SARA.Avi.AviFile">
+            <summary>
+            Encapsulation of PAVIFILE. Represents AVI file.
+            </summary>
+        </member>
+        <member name="M:SARA.Avi.AviFile.#ctor(System.String)">
+            <summary>
+            Open AVI file.
+            </summary>
+            <param name="path">
+            Path to AVI file.
+            </param>
+        </member>
+        <member name="M:SARA.Avi.AviFile.Finalize">
+            <summary>
+            AviFile destructor.
+            </summary>
+        </member>
+        <member name="M:SARA.Avi.AviFile.GetStream(System.Int32)">
+            <summary>
+            Get avi stream from AviFile.
+            </summary>
+            <param name="id">
+            Stream id.
+            </param>
+            <returns>
+            Avi stream or null when stream does not exist.
+            </returns>
+        </member>
+        <member name="M:SARA.Avi.AviFile.GetVideoStream">
+            <summary>
+            Get video stream from AVI file.
+            </summary>
+            <returns>
+            Video stream.
+            </returns>
+        </member>
+        <member name="T:SARA.Avi.AudioStream">
+            <summary>
+            AVI audio stream.
+            </summary>
+        </member>
+        <member name="T:SARA.Avi.AviStream">
+            <summary>
+            Encapsulation of PAVISTREAM. Represents AVI stream.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviStream._aviStream">
+            <summary>
+            Handle to AviFil32 avi stream.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviStream._streamInfo">
+            <summary>
+            Stream info header.
+            </summary>
+        </member>
+        <member name="M:SARA.Avi.AviStream.#ctor(System.IntPtr,SARA.Avi.AviMarshal.AVISTREAMINFO)">
+            <summary>
+            Avi stream constructor.
+            </summary>
+            <param name="aviStream">
+            Handle to AviFil32 avi stream.
+            </param>
+            <param name="streamInfo">
+            Stream info header.
+            </param>
+        </member>
+        <member name="M:SARA.Avi.AviStream.Finalize">
+            <summary>
+            Avi stream destructor.
+            </summary>
+        </member>
+        <member name="P:SARA.Avi.AviStream.Length">
+            <summary>
+            Length of stream in samples/frames.
+            </summary>
+        </member>
+        <member name="M:SARA.Avi.AudioStream.#ctor(System.IntPtr,SARA.Avi.AviMarshal.AVISTREAMINFO)">
+            <summary>
+            AudioStream constructor.
+            </summary>
+            <param name="aviStream">
+            Handle to AviFil32 avi stream.
+            </param>
+            <param name="streamInfo">
+            Stream info header.
+            </param>
+        </member>
+        <member name="T:SARA.Avi.VideoStream">
+            <summary>
+            AVI video stream.
+            </summary>
+        </member>
+        <member name="M:SARA.Avi.VideoStream.#ctor(System.IntPtr,SARA.Avi.AviMarshal.AVISTREAMINFO)">
+            <summary>
+            VideoStream constructor.
+            </summary>
+            <param name="aviStream">
+            Handle to AviFil32 avi stream.
+            </param>
+            <param name="streamInfo">
+            Stream info header.
+            </param>
+        </member>
+        <member name="M:SARA.Avi.VideoStream.GetFrameGrabber">
+            <summary>
+            Get FrameGrabber to grab frames from AVI.
+            </summary>
+            <returns>
+            new FrameGrabber object.
+            </returns>
+        </member>
+        <member name="M:SARA.Avi.VideoStream.GetAllFrames">
+            <summary>
+            Get all frames from AVI file.
+            </summary>
+            <returns>
+            Sequence of all frames in AVI file.
+            </returns>
+        </member>
+        <member name="T:SARA.Avi.TextStream">
+            <summary>
+            AVI text stream.
+            </summary>
+        </member>
+        <member name="M:SARA.Avi.TextStream.#ctor(System.IntPtr,SARA.Avi.AviMarshal.AVISTREAMINFO)">
+            <summary>
+            TextStream constructor.
+            </summary>
+            <param name="aviStream">
+            Handle to AviFil32 avi stream.
+            </param>
+            <param name="streamInfo">
+            Stream info header.
+            </param>
+        </member>
+        <member name="T:SARA.Avi.AviMarshal.AviFil32">
+            <summary>
+            Marshal of avifil32.dll library
+            </summary>
+        </member>
+        <member name="M:SARA.Avi.AviMarshal.AviFil32.AVIFileExit">
+            <summary>
+            Marshal of AVIFileExit function. Exits the AVIFile library.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd756795(VS.85).aspx">MSDN</a>.
+            </remarks>
+        </member>
+        <member name="M:SARA.Avi.AviMarshal.AviFil32.AVIFileGetStream(System.IntPtr,System.IntPtr@,SARA.Avi.AviMarshal.AviFil32.StreamType,System.Int32)">
+            <summary>
+            Marshal of AVIFileGetStream function. Gets stream from AVI file.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd756796(VS.85).aspx">MSDN</a>.
+            </remarks>
+            <param name="pfile">
+            Handle to an open AVI file.
+            </param>
+            <param name="ppavi">
+            Pointer to the new stream interface.
+            </param>
+            <param name="fccType">
+            Four-character code indicating the type of stream to open. Zero indicates any stream can be opened. 
+            </param>
+            <param name="lParam">
+            Count of the stream type. Identifies which occurrence of the specified stream type to access.
+            </param>
+            <returns>
+            Returns zero if successful or an error otherwise.
+            </returns>
+        </member>
+        <member name="M:SARA.Avi.AviMarshal.AviFil32.AVIFileInit">
+            <summary>
+            Marshal of AVIFileInit function. Initializes the AVIFile library.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd756799(VS.85).aspx">MSDN</a>.
+            </remarks>
+        </member>
+        <member name="M:SARA.Avi.AviMarshal.AviFil32.AVIFileOpen(System.IntPtr@,System.String,SARA.Avi.AviMarshal.AviFil32.AVIFileOpenMode,System.IntPtr)">
+            <summary>
+            Marshal of AVIFileOpen function. Opens an AVI file.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd756800(VS.85).aspx">MSDN</a>.
+            </remarks>
+            <param name="ppfile">
+            Pointer to a buffer that receives the new IAVIFile interface pointer.
+            </param>
+            <param name="szFile">
+            String containing the name of the file to open.
+            </param>
+            <param name="mode">
+            Access mode to use when opening the file. The default access mode is OF_READ.
+            </param>
+            <param name="pclsidHandler">
+            Pointer to a class identifier of the standard or custom handler you want to use. If the value is NULL, 
+            the system chooses a handler from the registry based on the file extension or the RIFF type specified in the file.
+            </param>
+            <returns>
+            Returns zero if successful or an error otherwise.
+            </returns>
+        </member>
+        <member name="M:SARA.Avi.AviMarshal.AviFil32.AVIFileRelease(System.IntPtr)">
+            <summary>
+            Marshal of AVIFileRelease function. Decrements the reference count of an AVI file interface handle 
+            and closes the file if the count reaches zero.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd756802(VS.85).aspx">MSDN</a>.
+            </remarks>
+            <param name="pfile">
+            Handle to an open AVI file.
+            </param>
+            <returns>
+            Returns the reference count of the file. This return value should be used only for debugging purposes.
+            </returns>
+        </member>
+        <member name="M:SARA.Avi.AviMarshal.AviFil32.AVIStreamGetFrame(System.IntPtr,System.Int32)">
+            <summary>
+            Marshal of AVIStreamGetFrame function. Returns the address of a decompressed video frame.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd756828(VS.85).aspx">MSDN</a>.
+            </remarks>
+            <param name="pgf">
+            Pointer to the IGetFrame interface.
+            </param>
+            <param name="lPos">
+            Position, in samples, within the stream of the desired frame.
+            </param>
+            <returns>
+            Returns a pointer to the frame data if successful or NULL otherwise.
+            </returns>
+        </member>
+        <member name="M:SARA.Avi.AviMarshal.AviFil32.AVIStreamGetFrameClose(System.IntPtr)">
+            <summary>
+            Marshal of AVISreamGetFrameClose function. Releases resources used to decompress video frames.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd756829(VS.85).aspx">MSDN</a>.
+            </remarks>
+            <param name="pget">
+            Handle returned from the AVIStreamGetFrameOpen function.
+            </param>
+            <returns>
+            Returns zero if successful or an error otherwise.
+            </returns>
+        </member>
+        <member name="M:SARA.Avi.AviMarshal.AviFil32.AVIStreamGetFrameOpen(System.IntPtr,SARA.Avi.AviMarshal.BITMAPINFOHEADER@)">
+            <summary>
+            Marshal of AVIStreamGetFrameOpen function. Prepares to decompress video frames from the specified video stream.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd756830(VS.85).aspx">MSDN</a>.
+            </remarks>
+            <param name="pavi">
+            Pointer to the video stream used as the video source.
+            </param>
+            <param name="lpbiWanted">
+            Pointer to a structure that defines the desired video format.
+            </param>
+            <returns>
+            Returns a GetFrame object that can be used with the AVIStreamGetFrame function.
+            </returns>
+        </member>
+        <member name="M:SARA.Avi.AviMarshal.AviFil32.AVIStreamInfo(System.IntPtr,SARA.Avi.AviMarshal.AVISTREAMINFO@,System.Int32)">
+            <summary>
+            Marshal of AVIStreamInfo function. Obtains stream header information.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd756831(VS.85).aspx">MSDN</a>.
+            </remarks>
+            <param name="pavi">
+            Handle to an open stream.
+            </param>
+            <param name="psi">
+            Pointer to a structure to contain the stream information.
+            </param>
+            <param name="lSize">
+            Size, in bytes, of the structure used for psi.
+            </param>
+            <returns>
+            Returns zero if successful or an error otherwise.
+            </returns>
+        </member>
+        <member name="M:SARA.Avi.AviMarshal.AviFil32.AVIStreamReadFormat(System.IntPtr,System.Int32,SARA.Avi.AviMarshal.BITMAPINFOHEADER@,System.Int32@)">
+            <summary>
+            Marshal of AVIStreamReadFormat function. Reads the stream format data.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd756851(VS.85).aspx">MSDN</a>.
+            </remarks>
+            <param name="pavi">
+            Handle to an open stream. 
+            </param>
+            <param name="lPos">
+            Position in the stream used to obtain the format data. 
+            </param>
+            <param name="lpFormat">
+            Pointer to a buffer to contain the format data. 
+            </param>
+            <param name="lpcbFormat">
+            Pointer to a location indicating the size of the memory block referenced by lpFormat.</param>
+            <returns>
+            Returns zero if successful or an error otherwise.
+            </returns>
+        </member>
+        <member name="M:SARA.Avi.AviMarshal.AviFil32.AVIStreamReadFormat(System.IntPtr,System.Int32,System.IntPtr,System.Int32@)">
+            <summary>
+            Marshal of AVIStreamReadFormat function. Reads the stream format data.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd756851(VS.85).aspx">MSDN</a>.
+            </remarks>
+            <param name="pavi">
+            Handle to an open stream. 
+            </param>
+            <param name="lPos">
+            Position in the stream used to obtain the format data. 
+            </param>
+            <param name="lpFormat">
+            Pointer to a buffer to contain the format data. 
+            </param>
+            <param name="lpcbFormat">
+            Pointer to a location indicating the size of the memory block referenced by lpFormat.</param>
+            <returns>
+            Returns zero if successful or an error otherwise.
+            </returns>
+        </member>
+        <member name="M:SARA.Avi.AviMarshal.AviFil32.AVIStreamRelease(System.IntPtr)">
+            <summary>
+            Marshal of AVIStreamRelease function. Decrements the reference count of an AVI stream interface handle, 
+            and closes the stream if the count reaches zero.
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/dd756852(VS.85).aspx">MSDN</a>.
+            </remarks>
+            <param name="pavi">
+            Handle to an open stream.
+            </param>
+            <returns>
+            Returns the current reference count of the stream. This value should be used only for debugging purposes.
+            </returns>
+        </member>
+        <member name="T:SARA.Avi.AviMarshal.AviFil32.AVIError">
+            <summary>
+            Error codes that can be returned by avifil32.dll functions.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIError.AVIERR_OK">
+            <summary>
+            No error occured.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIError.AVIERR_BADFORMAT">
+            <summary>
+            The file couldn't be read, indicating a corrupt file or an unrecognized format.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIError.AVIERR_MEMORY">
+            <summary>
+            The file could not be opened because of insufficient memory.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIError.AVIERR_FILEREAD">
+            <summary>
+            A disk error occurred while reading the file.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIError.AVIERR_FILEOPEN">
+            <summary>
+            A disk error occurred while opening the file.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIError.AVIERR_NODATA">
+            <summary>
+            The file does not contains requested data.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIError.REGDB_E_CLASSNOTREG">
+            <summary>
+            According to the registry, the type of file does not have a handler to process it.
+            </summary>
+        </member>
+        <member name="T:SARA.Avi.AviMarshal.AviFil32.AVIFileOpenMode">
+            <summary>
+            Access mode to use when opening the AVI file.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIFileOpenMode.OF_CREATE">
+            <summary>
+            Creates a new file. If the file already exists, it is truncated to zero length.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIFileOpenMode.OF_PARSE">
+            <summary>
+            Skips time-consuming operations, such as building an index. Set this flag if you want the function to 
+            return as quickly as possible—for example, if you are going to query the file properties but not read the file.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIFileOpenMode.OF_READ">
+            <summary>
+            Opens the file for reading.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIFileOpenMode.OF_READWRITE">
+            <summary>
+            Opens the file for reading and writing.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIFileOpenMode.OF_SHARE_DENY_NONE">
+            <summary>
+            Opens the file nonexclusively. Other processes can open the file with read or write access. 
+            AVIFileOpen fails if another process has opened the file in compatibility mode.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIFileOpenMode.OF_SHARE_DENY_READ">
+            <summary>
+            Opens the file nonexclusively. Other processes can open the file with write access. 
+            AVIFileOpen fails if another process has opened the file in compatibility mode or has read access to it.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIFileOpenMode.OF_SHARE_DENY_WRITE">
+            <summary>
+            Opens the file nonexclusively. Other processes can open the file with read access. AVIFileOpen fails 
+            if another process has opened the file in compatibility mode or has write access to it.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIFileOpenMode.OF_SHARE_EXCLUSIVE">
+            <summary>
+            Opens the file and denies other processes any access to it. 
+            AVIFileOpen fails if any other process has opened the file.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.AVIFileOpenMode.OF_WRITE">
+            <summary>
+            Opens the file for writing.
+            </summary>
+        </member>
+        <member name="T:SARA.Avi.AviMarshal.AviFil32.StreamType">
+            <summary>
+            Four-character codes indicating the type of stream.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.StreamType.ANY">
+            <summary>
+            Any stream type (only to open).
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.StreamType.AUDIO">
+            <summary>
+            Audio stream.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.StreamType.MIDI">
+            <summary>
+            MIDI stream.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.StreamType.TEXT">
+            <summary>
+            Text stream.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.AviFil32.StreamType.VIDEO">
+            <summary>
+            Video stream.
+            </summary>
+        </member>
+        <member name="T:SARA.Avi.AviException">
+            <summary>
+            An exception that can be thrown by any function from <see cref="N:SARA.Avi"/> module.
+            </summary>
+        </member>
+        <member name="M:SARA.Avi.AviException.#ctor(System.String)">
+            <summary>
+            Constructor that creates new AviException.
+            </summary>
+            <param name="message">
+            Message that describes an error.
+            </param>
+        </member>
+        <member name="T:SARA.Avi.MidiStream">
+            <summary>
+            AVI MIDI stream.
+            </summary>
+        </member>
+        <member name="M:SARA.Avi.MidiStream.#ctor(System.IntPtr,SARA.Avi.AviMarshal.AVISTREAMINFO)">
+            <summary>
+            MidiStream constructor.
+            </summary>
+            <param name="aviStream">
+            Handle to AviFil32 avi stream.
+            </param>
+            <param name="streamInfo">
+            Stream info header.
+            </param>
+        </member>
+        <member name="T:SARA.Avi.FrameGrabber">
+            <summary>
+            Object to grab frames from AVI.
+            </summary>
+        </member>
+        <member name="M:SARA.Avi.FrameGrabber.#ctor(System.IntPtr,SARA.Avi.AviMarshal.AVISTREAMINFO)">
+            <summary>
+            Create new FrameGrabber from GetFrame object.
+            </summary>
+            <param name="getFrameObj">
+            GetFrame object to create FrameGrabber.
+            </param>
+            <param name="streamInfo">
+            Information about stream in <see cref="T:SARA.Avi.AviMarshal.AVISTREAMINFO"/> structure
+            </param>
+        </member>
+        <member name="M:SARA.Avi.FrameGrabber.Finalize">
+            <summary>
+            FrameGrabber destructor.
+            </summary>
+        </member>
+        <member name="M:SARA.Avi.FrameGrabber.GetFloatMatrix(System.Int32)">
+            <summary>
+            Get frame from AVI as 2-dimensional black and white<see cref="T:SARA.Core.FloatMatrix"/>
+            </summary>
+            <remarks>
+            This function losts information of pixel colors.
+            </remarks>
+            <param name="frameId">
+            Id of requested frame.
+            </param>
+            <returns>
+            <see cref="T:SARA.Core.FloatMatrix"/> with requested frame or null.
+            </returns>
+        </member>
+        <member name="M:SARA.Avi.FrameGrabber.GetAllFrames">
+            <summary>
+            Get sequence of all frames in AVI file.
+            </summary>
+            <returns>
+            Sequence of all frames.
+            </returns>
+        </member>
+        <member name="T:SARA.Avi.AviMarshal.BITMAPINFOHEADER">
+            <summary>
+            Marshal of BITMAPINFOHEADER structure
+            </summary>
+            <remarks>
+            See full documentation on <a href="http://msdn.microsoft.com/en-us/library/aa930622.aspx">MSDN</a>.
+            </remarks>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.BITMAPINFOHEADER.biSize">
+            <summary>
+            Specifies the size of the structure, in bytes.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.BITMAPINFOHEADER.biWidth">
+            <summary>
+            Specifies the width of the bitmap, in pixels.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.BITMAPINFOHEADER.biHeight">
+            <summary>
+            Specifies the height of the bitmap, in pixels.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.BITMAPINFOHEADER.biPlanes">
+            <summary>
+            Specifies the number of planes for the target device.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.BITMAPINFOHEADER.biBitCount">
+            <summary>
+            Specifies the number of bits per pixel.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.BITMAPINFOHEADER.biCompression">
+            <summary>
+            Specifies the type of compression for a compressed bottom-up bitmap (top-down DIBs cannot be compressed).
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.BITMAPINFOHEADER.biSizeImage">
+            <summary>
+            Specifies the size, in bytes, of the image.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.BITMAPINFOHEADER.biXPelsPerMeter">
+            <summary>
+            Specifies the horizontal resolution, in pixels per meter, of the target device for the bitmap.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.BITMAPINFOHEADER.biYPelsPerMeter">
+            <summary>
+            Specifies the vertical resolution, in pixels per meter, of the target device for the bitmap.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.BITMAPINFOHEADER.biClrUsed">
+            <summary>
+            Specifies the number of color indexes in the color table that are actually used by the bitmap.
+            </summary>
+        </member>
+        <member name="F:SARA.Avi.AviMarshal.BITMAPINFOHEADER.biClrImportant">
+            <summary>
+            Specifies the number of color indexes required for displaying the bitmap.
+            </summary>
+        </member>
+    </members>
+</doc>

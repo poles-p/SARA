@@ -1,0 +1,9 @@
+D:\ProjektyCS\SARA\SARA.SimpleGUI\obj\Debug\ResolveAssemblyReference.cache
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Debug\SARA.SimpleGUI.dll
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Debug\SARA.SimpleGUI.pdb
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Debug\SARA.dll
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Debug\SARA.Drawing.dll
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Debug\SARA.Drawing.pdb
+D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Debug\SARA.pdb
+D:\ProjektyCS\SARA\SARA.SimpleGUI\obj\Debug\SARA.SimpleGUI.dll
+D:\ProjektyCS\SARA\SARA.SimpleGUI\obj\Debug\SARA.SimpleGUI.pdb

@@ -1,0 +1,7 @@
+D:\ProjektyCS\SARA\SARA.Drawing\obj\Debug\ResolveAssemblyReference.cache
+D:\ProjektyCS\SARA\SARA.Drawing\bin\Debug\SARA.Drawing.dll
+D:\ProjektyCS\SARA\SARA.Drawing\bin\Debug\SARA.Drawing.pdb
+D:\ProjektyCS\SARA\SARA.Drawing\bin\Debug\SARA.dll
+D:\ProjektyCS\SARA\SARA.Drawing\bin\Debug\SARA.pdb
+D:\ProjektyCS\SARA\SARA.Drawing\obj\Debug\SARA.Drawing.dll
+D:\ProjektyCS\SARA\SARA.Drawing\obj\Debug\SARA.Drawing.pdb

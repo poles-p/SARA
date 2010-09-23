@@ -1,0 +1,5 @@
+D:\ProjektyCS\SARA\SARA\bin\Release\SARA.dll
+D:\ProjektyCS\SARA\SARA\bin\Release\SARA.pdb
+D:\ProjektyCS\SARA\SARA\obj\Release\ResolveAssemblyReference.cache
+D:\ProjektyCS\SARA\SARA\obj\Release\SARA.dll
+D:\ProjektyCS\SARA\SARA\obj\Release\SARA.pdb

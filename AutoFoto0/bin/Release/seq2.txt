@@ -1,0 +1,4 @@
+D:\ProjektyCS\SARA\Data\Flat2\*.fit
+D:\ProjektyCS\SARA\Data\Flat2Bias\*.fit
+D:\ProjektyCS\SARA\Data\Seq2\DarkPost\*.fit
+D:\ProjektyCS\SARA\Data\Seq2\Data\booo<322>.fit

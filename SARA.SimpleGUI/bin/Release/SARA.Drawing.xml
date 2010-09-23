@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SARA.Drawing</name>
+    </assembly>
+    <members>
+        <member name="T:SARA.Drawing.LinearMatrixDrawer">
+            <summary>
+            Matrix drawer with linear projection between matrix values and color. 
+            This matrix drawer can be used only to draw 2D matrices.
+            </summary>
+        </member>
+        <member name="T:SARA.Drawing.IMatrixDrawer">
+            <summary>
+            Converter between <see cref="T:SARA.Core.FloatMatrix"/> and <see cref="T:System.Drawing.Bitmap"/>, used to draw matrices.
+            </summary>
+        </member>
+        <member name="M:SARA.Drawing.IMatrixDrawer.ToBitmap(SARA.Core.FloatMatrix)">
+            <summary>
+            Convert <see cref="T:SARA.Core.FloatMatrix"/> to <see cref="T:System.Drawing.Bitmap"/>.
+            </summary>
+            <param name="matrix">
+            Matrix to convert.
+            </param>
+            <returns>
+            <see cref="T:System.Drawing.Bitmap"/> that represents specified matrix.
+            </returns>
+        </member>
+        <member name="M:SARA.Drawing.LinearMatrixDrawer.#ctor">
+            <summary>
+            Create new <see cref="T:SARA.Drawing.LinearMatrixDrawer"/> with default tresholdes (0 and 255).
+            </summary>
+        </member>
+        <member name="M:SARA.Drawing.LinearMatrixDrawer.#ctor(System.Single,System.Single)">
+            <summary>
+            Create new <see cref="T:SARA.Drawing.LinearMatrixDrawer"/>.
+            </summary>
+            <param name="min">
+            Black treshold.
+            </param>
+            <param name="max">
+            White Treshold.
+            </param>
+        </member>
+        <member name="M:SARA.Drawing.LinearMatrixDrawer.ToBitmap(SARA.Core.FloatMatrix)">
+            <summary>
+            Convert <see cref="T:SARA.Core.FloatMatrix"/> to <see cref="T:System.Drawing.Bitmap"/>. Only for 2D matrices.
+            </summary>
+            <param name="matrix">
+            Matrix to convert.
+            </param>
+            <returns>
+            <see cref="T:System.Drawing.Bitmap"/> that represents specified matrix.
+            </returns>
+        </member>
+        <member name="P:SARA.Drawing.LinearMatrixDrawer.Min">
+            <summary>
+            Black treshold.
+            </summary>
+        </member>
+        <member name="P:SARA.Drawing.LinearMatrixDrawer.Max">
+            <summary>
+            White treshold.
+            </summary>
+        </member>
+    </members>
+</doc>
