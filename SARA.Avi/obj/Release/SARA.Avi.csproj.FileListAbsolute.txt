@@ -7,3 +7,6 @@ D:\ProjektyCS\SARA\SARA.Avi\bin\Release\SARA.dll
 D:\ProjektyCS\SARA\SARA.Avi\bin\Release\SARA.pdb
 D:\ProjektyCS\SARA\SARA.Avi\bin\Release\SARA.xml
 D:\ProjektyCS\SARA\SARA.Avi\bin\Release\SARA.Avi.XML
+D:\ProjektyCS\SARA\bin\.Net3.5\Release\SARA.Avi.XML
+D:\ProjektyCS\SARA\bin\.Net3.5\Release\SARA.Avi.dll
+D:\ProjektyCS\SARA\bin\.Net3.5\Release\SARA.Avi.pdb

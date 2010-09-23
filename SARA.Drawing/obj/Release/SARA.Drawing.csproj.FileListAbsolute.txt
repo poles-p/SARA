@@ -7,3 +7,6 @@ D:\ProjektyCS\SARA\SARA.Drawing\obj\Release\SARA.Drawing.dll
 D:\ProjektyCS\SARA\SARA.Drawing\obj\Release\SARA.Drawing.pdb
 D:\ProjektyCS\SARA\SARA.Drawing\bin\Release\SARA.xml
 D:\ProjektyCS\SARA\SARA.Drawing\bin\Release\SARA.Drawing.XML
+D:\ProjektyCS\SARA\bin\.Net3.5\Release\SARA.Drawing.XML
+D:\ProjektyCS\SARA\bin\.Net3.5\Release\SARA.Drawing.dll
+D:\ProjektyCS\SARA\bin\.Net3.5\Release\SARA.Drawing.pdb

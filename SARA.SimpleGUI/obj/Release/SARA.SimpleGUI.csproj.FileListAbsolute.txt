@@ -10,3 +10,6 @@ D:\ProjektyCS\SARA\SARA.SimpleGUI\obj\Release\SARA.SimpleGUI.pdb
 D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.Drawing.xml
 D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.xml
 D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Release\SARA.SimpleGUI.XML
+D:\ProjektyCS\SARA\bin\.Net3.5\Release\SARA.SimpleGUI.XML
+D:\ProjektyCS\SARA\bin\.Net3.5\Release\SARA.SimpleGUI.dll
+D:\ProjektyCS\SARA\bin\.Net3.5\Release\SARA.SimpleGUI.pdb

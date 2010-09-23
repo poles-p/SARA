@@ -7,3 +7,5 @@ D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Debug\SARA.Drawing.pdb
 D:\ProjektyCS\SARA\SARA.SimpleGUI\bin\Debug\SARA.pdb
 D:\ProjektyCS\SARA\SARA.SimpleGUI\obj\Debug\SARA.SimpleGUI.dll
 D:\ProjektyCS\SARA\SARA.SimpleGUI\obj\Debug\SARA.SimpleGUI.pdb
+D:\ProjektyCS\SARA\bin\.Net3.5\Debug\SARA.SimpleGUI.dll
+D:\ProjektyCS\SARA\bin\.Net3.5\Debug\SARA.SimpleGUI.pdb

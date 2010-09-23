@@ -5,3 +5,5 @@ D:\ProjektyCS\SARA\SARA.Avi\bin\Debug\SARA.pdb
 D:\ProjektyCS\SARA\SARA.Avi\obj\Debug\ResolveAssemblyReference.cache
 D:\ProjektyCS\SARA\SARA.Avi\obj\Debug\SARA.Avi.dll
 D:\ProjektyCS\SARA\SARA.Avi\obj\Debug\SARA.Avi.pdb
+D:\ProjektyCS\SARA\bin\.Net3.5\Debug\SARA.Avi.dll
+D:\ProjektyCS\SARA\bin\.Net3.5\Debug\SARA.Avi.pdb

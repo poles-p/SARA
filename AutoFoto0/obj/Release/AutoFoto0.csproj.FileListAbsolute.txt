@@ -16,3 +16,6 @@ D:\ProjektyCS\SARA\AutoFoto0\bin\Release\SARA.Avi.dll
 D:\ProjektyCS\SARA\AutoFoto0\bin\Release\SARA.Avi.pdb
 D:\ProjektyCS\SARA\AutoFoto0\bin\Release\SARA.Avi.xml
 D:\ProjektyCS\SARA\AutoFoto0\bin\Release\AutoFoto0.XML
+D:\ProjektyCS\SARA\bin\.Net3.5\Release\AutoFoto0.XML
+D:\ProjektyCS\SARA\bin\.Net3.5\Release\AutoFoto0.exe
+D:\ProjektyCS\SARA\bin\.Net3.5\Release\AutoFoto0.pdb
